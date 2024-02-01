@@ -215,7 +215,7 @@ function addCounter(table, idx, name, data) {
   button1.setAttribute("type", "button");
   button1.setAttribute("onclick", "counter(this.parentElement, -1)");
   button1.setAttribute("value", "-");
-  button1.setAttribute("style", "color: white; background-color: #B22222; padding-right: 15px; padding-left: 15px; padding-top: 23px; padding-bottom: 23px");
+  button1.setAttribute("style", "color: white; background-color: #7822B2; padding-right: 15px; padding-left: 15px; padding-top: 23px; padding-bottom: 23px");
   cell2.appendChild(button1);
 
   var inp = document.createElement("input");
@@ -227,7 +227,7 @@ function addCounter(table, idx, name, data) {
   } else {
     inp.setAttribute("name", data.code);
   }
-  inp.setAttribute("style", "background-color: #2F4F4F; color: white; font-weight: bold; border: none; text-align: center; padding-right: 25px; padding-left: 25px; padding-top: 25px; padding-bottom: 25px");
+  inp.setAttribute("style", "background-color: #231F20; color: white; font-weight: bold; border: none; text-align: center; padding-right: 25px; padding-left: 25px; padding-top: 25px; padding-bottom: 25px");
   inp.setAttribute("disabled", "");
   inp.setAttribute("value", 0);
   inp.setAttribute("size", 2);
@@ -238,7 +238,7 @@ function addCounter(table, idx, name, data) {
   button2.setAttribute("type", "button");
   button2.setAttribute("onclick", "counter(this.parentElement, 1)");
   button2.setAttribute("value", "+");
-  button2.setAttribute("style", "background-color: #3CB371; padding-right: 15px; padding-left: 15px; padding-top: 23px; padding-bottom: 23px");
+  button2.setAttribute("style", "background-color:  #0068B3; padding-right: 15px; padding-left: 15px; padding-top: 23px; padding-bottom: 23px");
   cell2.appendChild(button2);
 
   if (data.hasOwnProperty('defaultValue')) {
