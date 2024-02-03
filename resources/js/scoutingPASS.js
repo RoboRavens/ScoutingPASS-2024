@@ -152,24 +152,56 @@ if(data.code == "tct") {
   cell.appendChild(button2);
   cell.appendChild(button2);
   cell.appendChild(button2);
-	var button4 = document.createElement("input");
-  button4.setAttribute("id", "clear_" + data.code);
-  button4.setAttribute("type", "button");
-  button4.setAttribute("onclick", "resetTimer(this.parentElement)");
-  button4.setAttribute("value", "Reset");
-  cell.appendChild(button4);
+
+  var lineBreak = document.createElement("br");
+  cell.appendChild(lineBreak);
+  
+  var button2 = document.createElement("input");
+  button2.setAttribute("id", "undo_" + data.code);
+  button2.setAttribute("type", "button");
+  button2.setAttribute("onclick", "undoCycle(this.parentElement)");
+  button2.setAttribute("value", "Undo");
+  button2.setAttribute('style', "margin-left: 20px;");
+  cell.appendChild(button2);
   
   
   var lineBreak = document.createElement("br");
   cell.appendChild(lineBreak);
-cell.appendChild(button2);
-   var button2 = document.createElement("input");
-    button2.setAttribute("id", "undo_" + data.code);
-    button2.setAttribute("type", "button");
-    button2.setAttribute("onclick", "undoCycle(this.parentElement)");
-    button2.setAttribute("value", "Undo");
-    button2.setAttribute('style', "margin-left: 20px;");
-    cell.appendChild(button2);
+
+  
+}
+if(data.code == "act") {
+  var button1 = document.createElement("input");
+  button1.setAttribute("id", "start_" + data.code);
+  button1.setAttribute("type", "button");
+  button1.setAttribute("onclick", "timer(this.parentElement)");
+  button1.setAttribute("value", "Start");
+  cell.appendChild(button1);
+  cell.appendChild(inp);
+ var button2 = document.createElement("input");
+  button2.setAttribute("id", "cycle_" + data.code);
+  button2.setAttribute("type", "button");
+  button2.setAttribute("onclick", "newCycle(this.parentElement)");
+  button2.setAttribute("value", "Pickup");
+  cell.appendChild(button2);
+  cell.appendChild(button2);
+  cell.appendChild(button2);
+
+  var lineBreak = document.createElement("br");
+  cell.appendChild(lineBreak);
+  
+  var button2 = document.createElement("input");
+  button2.setAttribute("id", "undo_" + data.code);
+  button2.setAttribute("type", "button");
+  button2.setAttribute("onclick", "undoCycle(this.parentElement)");
+  button2.setAttribute("value", "Undo");
+  button2.setAttribute('style', "margin-left: 20px;");
+  cell.appendChild(button2);
+  
+  
+  var lineBreak = document.createElement("br");
+  cell.appendChild(lineBreak);
+
   
 }
 
@@ -1194,10 +1226,10 @@ function moveTouch(e) {
   // sliding horizontally
   if (diffX / screen.width > xThreshold) {
     // swiped left
-    //swipePage(1);
+    swipePage(1);
   } else if (diffX / screen.width < -xThreshold) {
     // swiped right
-    //swipePage(-1);
+    swipePage(-1);
   }
   initialX = null;
 };
@@ -1451,7 +1483,6 @@ function addShotTypeAmped(event)
   d.value = cycleInput.value.replace(/\"/g,'').replace(/\[/g, '').replace(/\]/g, '').replace(/,/g, ', ');
   
 }
-
 function addShotTypeMiss(event)
 {
 
