@@ -143,41 +143,33 @@ if(data.code == "tct") {
   button1.setAttribute("onclick", "timer(this.parentElement)");
   button1.setAttribute("value", "Start");
   cell.appendChild(button1);
-  
   cell.appendChild(inp);
-
-  var button2 = document.createElement("input");
+ var button2 = document.createElement("input");
   button2.setAttribute("id", "cycle_" + data.code);
   button2.setAttribute("type", "button");
   button2.setAttribute("onclick", "newCycle(this.parentElement)");
   button2.setAttribute("value", "Pickup");
   cell.appendChild(button2);
   cell.appendChild(button2);
+  cell.appendChild(button2);
+	var button4 = document.createElement("input");
+  button4.setAttribute("id", "clear_" + data.code);
+  button4.setAttribute("type", "button");
+  button4.setAttribute("onclick", "resetTimer(this.parentElement)");
+  button4.setAttribute("value", "Reset");
+  cell.appendChild(button4);
+  
   
   var lineBreak = document.createElement("br");
   cell.appendChild(lineBreak);
-
-  var button3 = document.createElement("input");
-  button3.setAttribute("id", "normal_" + data.code);
-  button3.setAttribute("type", "button");
-  button3.setAttribute("onclick", "");
-  button3.setAttribute("value", "Normal");
-  cell.appendChild(button3);
-
-  var button4 = document.createElement("input");
-  button4.setAttribute("id", "amped_" + data.code);
-  button4.setAttribute("type", "button");
-  button4.setAttribute("onclick", "");
-  button4.setAttribute("value", "Amped");
-  cell.appendChild(button4);
-
-  var button5 = document.createElement("input");
-  button5.setAttribute("id", "miss_" + data.code);
-  button5.setAttribute("type", "button");
-  button5.setAttribute("onclick", "");
-  button5.setAttribute("value", "Miss");
-  cell.appendChild(button5);
-  
+cell.appendChild(button2);
+   var button2 = document.createElement("input");
+    button2.setAttribute("id", "undo_" + data.code);
+    button2.setAttribute("type", "button");
+    button2.setAttribute("onclick", "undoCycle(this.parentElement)");
+    button2.setAttribute("value", "Undo");
+    button2.setAttribute('style', "margin-left: 20px;");
+    cell.appendChild(button2);
   
 }
 
