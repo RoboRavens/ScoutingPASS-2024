@@ -118,12 +118,13 @@ var config_data = `
 			"name": "Shooting Spot",
 			"code": "ss",
 			"type": "field_image",
-			"filename": "2024/field_image.png"
+			"filename": "2024/field_image.png",
+			"cycleTimer": "tct"
 		},
 		{
-		"name": "Dropped",
-		"code": "drp",
-		"type": "counter"
+			"name": "AmpMissNormal",
+			"code": "amn",
+			"type": "button"
 		},
 		{
 			"name": "Trap?",
