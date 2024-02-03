@@ -81,6 +81,11 @@ var config_data = `
 		}
 	],
 	"auton": [
+
+	{ 	"name": "Auto Cycle Timer",
+	     "code": "act",
+		  "type": "cycle"
+	},
 		{
 			"name": "Auto Scoring",
 			"code": "asg",
@@ -91,7 +96,8 @@ var config_data = `
 			"toggleClick": "true",
 			"showFlip": "false",
 			"showUndo": "false",
-			"shape": "circle 10 black lime true"
+			"shape": "circle 10 black lime true",
+			"cycleTimer": "act"
 		},
 		{
 		"name": "Scores",
@@ -103,6 +109,13 @@ var config_data = `
 			"code": "am",
 			"type": "counter"
 			},
+
+		{
+			"name": "Under Stage?",
+			"code": "us",
+			"type": "bool"
+		}, 
+
 		{
 			"name": "Mobility?",
 			"code": "am",
@@ -135,6 +148,24 @@ var config_data = `
 	],
 	"postmatch":[
 		{
+			"name": "Final Status",
+			"code": "fs",
+			"type": "radio",
+			"choices": {
+				"p": "Parked<br>",
+				"c": "Climbed<br>",
+				"f": "Attempted but failed<br>",
+				"x": "Not attempted"
+			},
+			"defaultValue": "x"
+		},
+		{
+			"name": "Trap?",
+			"code": "tr",
+			"type": "bool"
+		},
+		
+		{
 			"name": "Played Defense?",
 			"code": "pd",
 			"type": "bool"
@@ -156,6 +187,11 @@ var config_data = `
 			"type": "bool"
 		},
 		{
+			"name": "Under Stage Capability?",
+			"code": "us",
+			"type": "bool"
+		}, 
+		{
 			"name": "Source Pickup",
 			"code": "sp",
 			"type": "bool"
@@ -166,26 +202,9 @@ var config_data = `
 			"type": "bool"
 		},
 		{
-			"name": "Trap?",
-			"code": "tr",
-			"type": "bool"
-		},
-		{
 			"name": "Tipped",
 			"code": "tip",
 			"type": "bool"
-		},
-		{
-			"name": "Final Status",
-			"code": "fs",
-			"type": "radio",
-			"choices": {
-				"p": "Parked<br>",
-				"c": "Climbed<br>",
-				"f": "Attempted but failed<br>",
-				"x": "Not attempted"
-			},
-			"defaultValue": "x"
 		},
 		{
 			"name": "Comments",

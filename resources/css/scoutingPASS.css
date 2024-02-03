@@ -111,7 +111,25 @@ html, body{
   border: black;
   padding: 20px;
 }
-
+/* style the buttons in the auto cycle timer*/
+#cycle_act {
+    background-color: rgb(37, 99, 235);
+    color: white;
+    border: black;
+    padding: 20px;
+  }
+  #undo_act {
+    background-color: rgb(37, 99, 235);
+    color: white;
+    border: black;
+    padding: 20px;
+  }
+  #start_act{
+    background-color: rgb(37, 99, 235);
+    color: white;
+    border: black;
+    padding: 20px;
+  }
 /* Style the Undo button */
 #undo_tct {
   background-color: rgb(37, 99, 235);
