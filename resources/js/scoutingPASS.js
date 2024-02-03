@@ -252,7 +252,7 @@ function addCounter(table, idx, name, data) {
   button1.setAttribute("type", "button");
   button1.setAttribute("onclick", "counter(this.parentElement, -1)");
   button1.setAttribute("value", "-");
-  button1.setAttribute("style", "color: white; background-color: #B22222; padding-right: 15px; padding-left: 15px; padding-top: 23px; padding-bottom: 23px");
+  button1.setAttribute("style", "color: white; background-color: #7514D5; padding-right: 15px; padding-left: 15px; padding-top: 23px; padding-bottom: 23px");
   cell2.appendChild(button1);
 
   var inp = document.createElement("input");
@@ -275,7 +275,7 @@ function addCounter(table, idx, name, data) {
   button2.setAttribute("type", "button");
   button2.setAttribute("onclick", "counter(this.parentElement, 1)");
   button2.setAttribute("value", "+");
-  button2.setAttribute("style", "background-color: #3CB371; padding-right: 15px; padding-left: 15px; padding-top: 23px; padding-bottom: 23px");
+  button2.setAttribute("style", "background-color: #1F61E6; padding-right: 15px; padding-left: 15px; padding-top: 23px; padding-bottom: 23px");
   cell2.appendChild(button2);
 
   if (data.hasOwnProperty('defaultValue')) {
