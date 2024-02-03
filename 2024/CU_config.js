@@ -1,7 +1,7 @@
 var config_data = `
 {
 	"title": "Birds-Eye Scouting - 2024",
-	"page_title": "Crescendooo",
+	"page_title": "Crescendo",
 	"checkboxAs": "10",
 	"prematch": [{
 			"name": "Scouter Initals",
