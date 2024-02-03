@@ -77,7 +77,7 @@ var config_data = `
 			"type": "clickable_image",
 			"filename": "2024/field_image.png",
 			"clickRestriction": "one",
-			"shape": "circle 5  purple  true"
+			"shape": "circle 5  red  true"
 		}
 	],
 	"auton": [
@@ -96,7 +96,7 @@ var config_data = `
 			"toggleClick": "true",
 			"showFlip": "false",
 			"showUndo": "false",
-			"shape": "circle 10 black lime true",
+			"shape": "circle 10 blue purple true",
 			"cycleTimer": "act"
 		},
 		{
@@ -132,7 +132,8 @@ var config_data = `
 			"code": "ss",
 			"type": "field_image",
 			"filename": "2024/field_image.png",
-			"cycleTimer": "tct"
+			"cycleTimer": "tct",
+			"color": "red"
 		},
 		{
 			"name": "AmpMissNormal",
