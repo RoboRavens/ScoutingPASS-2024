@@ -74,6 +74,27 @@ html, body{
   border: black;
   padding: 20px;
 }
+/* Style the Amped Normal Miss Buttons */
+#miss_amn {
+    background-color: rgb(37, 99, 235);
+    color: white;
+    border: purple;
+    padding: 10px;
+}
+#amped_amn {
+    background-color: rgb(37, 99, 235);
+    color: white;
+    border: purple;
+    padding: 5px;
+}
+#normal_amn {
+    background-color: rgb(37, 99, 235);
+    color: white;
+    border: purple;
+    padding: 5px;
+}
+
+
 
 /* Style the Reset button */
 #clear_tct {
@@ -287,7 +308,7 @@ input {
 input[type=radio] {
 	display:inline-block;
 	vertical-align: middle;
-	border: 1px solid rgb(255, 255, 255);
+	border: 1px solid rgb(41, 27, 163);
 	padding: 0.5em;
 	-webkit-appearance: none;
     width: 20px;
@@ -306,7 +327,7 @@ input[type=radio]:focus {
 input[type=checkbox] {
 	display:inline-block;
 	vertical-align: middle;
-	border: 1px solid rgb(255,255, 255);
+	border: 1px solid rgb(41, 27, 163);
 	padding: 0.5em;
 	-webkit-appearance: none;
     width: 50px;

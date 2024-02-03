@@ -127,24 +127,7 @@ var config_data = `
 			"type": "button"
 		},
 		{
-			"name": "Trap?",
-			"code": "tr",
-			"type": "bool"
-		},
-		{
-			"name": "Final Status",
-			"code": "fs",
-			"type": "radio",
-			"choices": {
-				"p": "Parked<br>",
-				"c": "Climbed<br>",
-				"f": "Attempted but failed<br>",
-				"x": "Not attempted"
-			},
-			"defaultValue": "x"
-		},
-		{
-			"name": "Total # of alliance members climbed",
+			"name": "# of Climbers",
 			"code": "ac",
 			"type": "counter"
 		}
@@ -183,9 +166,26 @@ var config_data = `
 			"type": "bool"
 		},
 		{
+			"name": "Trap?",
+			"code": "tr",
+			"type": "bool"
+		},
+		{
 			"name": "Tipped",
 			"code": "tip",
 			"type": "bool"
+		},
+		{
+			"name": "Final Status",
+			"code": "fs",
+			"type": "radio",
+			"choices": {
+				"p": "Parked<br>",
+				"c": "Climbed<br>",
+				"f": "Attempted but failed<br>",
+				"x": "Not attempted"
+			},
+			"defaultValue": "x"
 		},
 		{
 			"name": "Comments",
