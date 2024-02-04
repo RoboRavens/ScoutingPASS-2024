@@ -153,8 +153,8 @@ if(data.code == "tct") {
   cell.appendChild(button2);
   cell.appendChild(button2);
 
-  var lineBreak = document.createElement("br");
-  cell.appendChild(lineBreak);
+  //var lineBreak = document.createElement("br");
+  //cell.appendChild(lineBreak);
   
   var button2 = document.createElement("input");
   button2.setAttribute("id", "undo_" + data.code);
