@@ -76,16 +76,17 @@ html, body{
 }
 /* Style the Amped Normal Miss Buttons */
 #miss_amn {
-    background-color: rgb(37, 99, 235);
+    background-color: #D23232;
     color: white;
     border: purple;
     padding: 10px;
 }
 #amped_amn {
-    background-color: rgb(37, 99, 235);
+    background-color: #e4b484;
     color: white;
     border: purple;
     padding: 5px;
+    padding-right: 10px
 }
 #normal_amn {
     background-color: rgb(37, 99, 235);
