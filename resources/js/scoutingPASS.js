@@ -1359,7 +1359,7 @@ function onFieldClick(event) {
     }
     // If associated with cycleTimer - send New Cycle EVENT
     if (cycleTimer != null) {
-      document.getElementById("cycle_" + cycleTimer.value).click();
+      //document.getElementById("cycle_" + cycleTimer.value).click();
     }
   }
 
