@@ -177,6 +177,7 @@ if(data.code == "act") {
   button1.setAttribute("type", "button");
   button1.setAttribute("onclick", "timer(this.parentElement)");
   button1.setAttribute("value", "Start");
+  button1.setAttribute('style', "Background-color: #4f884f");	
   cell.appendChild(button1);
   cell.appendChild(inp);
  var button2 = document.createElement("input");
@@ -188,15 +189,15 @@ if(data.code == "act") {
   cell.appendChild(button2);
   cell.appendChild(button2);
 
-  var lineBreak = document.createElement("br");
-  cell.appendChild(lineBreak);
+  //var lineBreak = document.createElement("br");
+  //cell.appendChild(lineBreak);
   
   var button2 = document.createElement("input");
   button2.setAttribute("id", "undo_" + data.code);
   button2.setAttribute("type", "button");
   button2.setAttribute("onclick", "undoCycle(this.parentElement)");
   button2.setAttribute("value", "Undo");
-  button2.setAttribute('style', "margin-left: 20px;");
+  button2.setAttribute('style', "margin-left: 20px; Background-color: #D23232");
   cell.appendChild(button2);
   
   
