@@ -1,6 +1,6 @@
 var config_data = `
 {
-	"title": "Birds-Eye Scouting - 2024",
+	"title": "Raven Scouting - 2024",
 	"page_title": "Crescendo",
 	"checkboxAs": "10",
 	"prematch": [{
