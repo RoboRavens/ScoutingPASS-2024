@@ -494,12 +494,14 @@ function addButton(table, idx, name, data) {
     ct.setAttribute("type", "hidden");
     ct.setAttribute("id", "input_" + data.code);
     ct.setAttribute("value", "[]");
+    ct.setAttribute("class", "buttonClass");
     cell.appendChild(ct);
     ct = document.createElement('input');
     ct.setAttribute("type", "text");
     ct.setAttribute("id", "display_" + data.code);
     ct.setAttribute("value", "");
     ct.setAttribute("disabled", "");
+    ct.setAttribute("class", "buttonClass");
     cell.appendChild(ct);
     var lineBreak = document.createElement("br");
     cell.appendChild(lineBreak);
@@ -1149,6 +1151,16 @@ function clearForm() {
   for (e of inputs) {
     code = e.id.substring(6)
 
+    if (e.className == "buttonClass") {
+      document.getElementById("input_amn").value = "[]"
+      document.getElementById("display_amn").value = ""
+    }
+
+    if (e.className == "buttonClass") {
+      e.value = "[]";
+      continue;
+    }
+
     // Don't clear key fields
     if (code == "m") continue
     if (code.substring(0, 2) == "r_") continue
@@ -1197,6 +1209,7 @@ function clearForm() {
 	      document.getElementById("cycletime_" + code).value = "[]"
 	      document.getElementById("display_" + code).value = ""
 	    }
+      
 	  }
 	} else {
           e.value = ""
