@@ -1,7 +1,7 @@
 var config_data = `
 {
 	"title": "Birds-Eye Scouting - 2024",
-	"page_title": "Crescendo",
+	"page_title": "Crescendoooooooo",
 	"checkboxAs": "10",
 	"prematch": [{
 			"name": "Scouter Initals",
@@ -15,7 +15,7 @@ var config_data = `
 			"name": "Event",
 			"code": "e",
 			"type": "event",
-			"defaultValue": "2024mibel",
+			"defaultValue": "2023mitr2",
 			"required": "true",
 			"disabled": "true"
 		},
@@ -77,7 +77,7 @@ var config_data = `
 			"type": "clickable_image",
 			"filename": "2024/field_image.png",
 			"clickRestriction": "one",
-			"shape": "circle 5  purple  true"
+			"shape": "circle 5  red  true"
 		}
 	],
 	"auton": [
@@ -96,7 +96,7 @@ var config_data = `
 			"toggleClick": "true",
 			"showFlip": "false",
 			"showUndo": "false",
-			"shape": "circle 10 black lime true",
+			"shape": "circle 10 blue purple true",
 			"cycleTimer": "act"
 		},
 		{
