@@ -77,7 +77,7 @@ var config_data = `
 			"type": "clickable_image",
 			"filename": "2024/field_image.png",
 			"clickRestriction": "one",
-			"shape": "circle 5  purple  true"
+			"shape": "circle 5 white white white white white true"
 		}
 	],
 	"auton": [
@@ -96,8 +96,7 @@ var config_data = `
 			"toggleClick": "true",
 			"showFlip": "false",
 			"showUndo": "false",
-			"shape": "circle 10 black lime true",
-			"cycleTimer": "act"
+			"shape": "circle 10 #FFFD98 #D81E5B true"
 		},
 		{
 		"name": "Scores",
@@ -132,21 +131,23 @@ var config_data = `
 			"code": "ss",
 			"type": "field_image",
 			"filename": "2024/field_image.png",
-			"cycleTimer": "tct"
+			"cycleTimer": "tct",
+			"shape": "circle 5 #FFFD98 #D81E5B true"
+			
 		},
 		{
 			"name": "AmpMissNormal",
 			"code": "amn",
 			"type": "button"
-		},
-		{
-			"name": "# of Climbers",
-			"code": "ac",
-			"type": "counter"
 		}
 		
 	],
 	"postmatch":[
+		{
+			"name": "# of Climbers",
+			"code": "ac",
+			"type": "counter"
+		},
 		{
 			"name": "Final Status",
 			"code": "fs",
