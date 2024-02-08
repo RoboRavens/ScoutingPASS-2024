@@ -180,7 +180,9 @@ if(data.code == "act") {
   button1.setAttribute('style', "Background-color: #4f884f");	
   cell.appendChild(button1);
   cell.appendChild(inp);
- var button2 = document.createElement("input");
+  
+  /*
+  var button2 = document.createElement("input");
   button2.setAttribute("id", "cycle_" + data.code);
   button2.setAttribute("type", "button");
   button2.setAttribute("onclick", "newCycle(this.parentElement)");
@@ -188,6 +190,7 @@ if(data.code == "act") {
   cell.appendChild(button2);
   cell.appendChild(button2);
   cell.appendChild(button2);
+  */
 
   //var lineBreak = document.createElement("br");
   //cell.appendChild(lineBreak);
@@ -197,7 +200,7 @@ if(data.code == "act") {
   button2.setAttribute("type", "button");
   button2.setAttribute("onclick", "undoCycle(this.parentElement)");
   button2.setAttribute("value", "Undo");
-  button2.setAttribute('style', "margin-left: 20px; Background-color: #D23232");
+  button2.setAttribute('style', "Background-color: #D23232");
   cell.appendChild(button2);
   
   
