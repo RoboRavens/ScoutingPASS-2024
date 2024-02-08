@@ -96,7 +96,8 @@ var config_data = `
 			"toggleClick": "true",
 			"showFlip": "false",
 			"showUndo": "false",
-			"shape": "circle 10 #FFFD98 #D81E5B true"
+			"shape": "circle 10 #FFFD98 #D81E5B true",
+			"cycleTimer": "act"
 		},
 		{
 		"name": "Scores",

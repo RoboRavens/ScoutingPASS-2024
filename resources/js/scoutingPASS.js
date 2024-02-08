@@ -181,6 +181,7 @@ if(data.code == "act") {
   cell.appendChild(button1);
   cell.appendChild(inp);
   
+  //No need fpr this button for our use case
   /*
   var button2 = document.createElement("input");
   button2.setAttribute("id", "cycle_" + data.code);
@@ -1376,6 +1377,7 @@ function onFieldClick(event) {
     // If associated with cycleTimer - send New Cycle EVENT
     if (cycleTimer != null) {
       document.getElementById("cycle_" + cycleTimer.value).click();
+      document.getElementById()
     }
   }
 
