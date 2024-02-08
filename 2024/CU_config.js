@@ -73,7 +73,7 @@ var config_data = `
 		},
 		{
 			"name": "Auto Start Position",
-			"code": "as",
+			"code": "asl",
 			"type": "clickable_image",
 			"filename": "2024/field_image.png",
 			"clickRestriction": "one",
@@ -118,7 +118,7 @@ var config_data = `
 
 		{
 			"name": "Mobility?",
-			"code": "am",
+			"code": "amo",
 			"type": "bool"
 		}
 	],
@@ -190,7 +190,7 @@ var config_data = `
 		},
 		{
 			"name": "Under Stage Capability?",
-			"code": "us",
+			"code": "usc",
 			"type": "bool"
 		}, 
 		{
