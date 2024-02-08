@@ -181,28 +181,26 @@ if(data.code == "act") {
   cell.appendChild(button1);
   cell.appendChild(inp);
   
-  //No need fpr this button for our use case
-  /*
-  var button2 = document.createElement("input");
+  //THIS BUTTON DOES NOTHING, IF YOU DELETE IT, THE FIELD CLICK WILL LAG REALLY BAD
+  // DO NOT DELETE > button2.setAttribute("type", "hidden");
+  
+  var button2 = document.createElement("input"); 
   button2.setAttribute("id", "cycle_" + data.code);
   button2.setAttribute("type", "button");
   button2.setAttribute("onclick", "newCycle(this.parentElement)");
   button2.setAttribute("value", "Pickup");
+  button2.setAttribute("type", "hidden");
   cell.appendChild(button2);
   cell.appendChild(button2);
   cell.appendChild(button2);
-  */
-
-  //var lineBreak = document.createElement("br");
-  //cell.appendChild(lineBreak);
   
-  var button2 = document.createElement("input");
-  button2.setAttribute("id", "undo_" + data.code);
-  button2.setAttribute("type", "button");
-  button2.setAttribute("onclick", "undoCycle(this.parentElement)");
-  button2.setAttribute("value", "Undo");
-  button2.setAttribute('style', "Background-color: #D23232");
-  cell.appendChild(button2);
+  var button3 = document.createElement("input");
+  button3.setAttribute("id", "undo_" + data.code);
+  button3.setAttribute("type", "button");
+  button3.setAttribute("onclick", "undoCycle(this.parentElement)");
+  button3.setAttribute("value", "Undo");
+  button3.setAttribute('style', "Background-color: #D23232");
+  cell.appendChild(button3);
   
   
   var lineBreak = document.createElement("br");
