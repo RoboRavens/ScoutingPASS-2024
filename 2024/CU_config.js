@@ -199,13 +199,8 @@ var config_data = `
 			"type": "bool"
 		},
 		{
-			"name": "Died",
+			"name": "Died/Tipped",
 			"code": "die",
-			"type": "bool"
-		},
-		{
-			"name": "Tipped",
-			"code": "tip",
 			"type": "bool"
 		},
 		{
