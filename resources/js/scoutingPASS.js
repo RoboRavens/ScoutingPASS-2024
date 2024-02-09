@@ -169,7 +169,14 @@ if(data.code == "tct") {
   var lineBreak = document.createElement("br");
   cell.appendChild(lineBreak);
 
-  
+  var ampButton = document.createElement("input");
+  ampButton.setAttribute("id", "amper_" + data.code);
+  ampButton.setAttribute("type", "button");
+  ampButton.setAttribute("onclick", "newCycle(this.parentElement); addShotTypeAmpScore(this.parentElement); addXToFinalArray()");
+  ampButton.setAttribute("value", "Amp Score");
+  ampButton.setAttribute('style', "margin-top: 10px; margin-bottom: 1px; Background-color: #D23232; width: 200px; height: 50px");
+  cell.appendChild(ampButton);
+
 }
 if(data.code == "act") {
   var button1 = document.createElement("input");
@@ -1381,6 +1388,18 @@ function onFieldClick(event) {
   drawFields()
 }
 
+function addXToFinalArray() {
+  // Get the current value of the input field and parse it as an array
+  var currentValue = JSON.parse(document.getElementById("input_ss").value);
+
+  // Add "x" to the array
+  currentValue.push("x");
+
+  // Update the input field with the modified array
+  document.getElementById("input_ss").value = JSON.stringify(currentValue);
+
+}
+
 function findMiddleOfBox(boxNum, width, height, resX, resY) {
   let boxHeight = height / resY;
   let boxWidth = width / resX;
@@ -1526,6 +1545,19 @@ function addShotTypeNormal(event)
   let d = document.getElementById("display" + base);
   d.value = cycleInput.value.replace(/\"/g,'').replace(/\[/g, '').replace(/\]/g, '').replace(/,/g, ', ');
   
+}
+
+function addShotTypeAmpScore(event)
+{
+
+  //this line check cycleTime value
+  let base = "_amn"
+  let cycleInput = document.getElementById("input" + base);
+  var tempValue = Array.from(JSON.parse(cycleInput.value));
+  tempValue.push("x");
+  cycleInput.value = JSON.stringify(tempValue);
+  let d = document.getElementById("display" + base);
+  d.value = cycleInput.value.replace(/\"/g,'').replace(/\[/g, '').replace(/\]/g, '').replace(/,/g, ', ');
 }
 
 function newCycle(event)
