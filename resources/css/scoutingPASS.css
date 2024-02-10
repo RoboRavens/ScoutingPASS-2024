@@ -139,27 +139,13 @@ html, body{
   padding: 20px;
 }
 
-#autonHeader, #teleopHeader1, #teleopHeader2{
-    color: #0068B3;
-    border-color: #0068B3;
-    border-width: 1px;
-}
 
-#postmatchHeader{
-	color: #0068B3;
-    border-width: 4px;
-    border-color: black;
-}
 
-#prematchHeader1, #prematchHeader2{
-    background: black;
-    border-color: #0068B3;
-    border-width: 1px;
-}
 
-#qrHeader1, #qrHeader2 {
-    color: #0068B3;
-}
+
+
+
+
     
 .field-image {
     margin: 2vw;

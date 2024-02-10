@@ -1,7 +1,7 @@
 var config_data = `
 {
 	"title": "Raven Scouting - 2024",
-	"page_title": "Crescendo",
+	"page_title": "",
 	"checkboxAs": "10",
 	"prematch": [{
 			"name": "Scouter Initals",
@@ -109,11 +109,6 @@ var config_data = `
 		"code": "am",
 		"type": "counter"
 		},
-		{
-			"name": "Under Stage?",
-			"code": "us",
-			"type": "bool"
-		}, 
 
 		{
 			"name": "Mobility?",
@@ -170,34 +165,8 @@ var config_data = `
 			"name": "Played Defense?",
 			"code": "pd",
 			"type": "bool"
-		},
-		{
-			"name": "Was Defended?",
-			"code": "df",
-			"type": "bool"
-		},
-		
-		{
-			"name": "Ground Pickup",
-			"code": "gp",
-			"type": "bool"
-		},
-		{
-			"name": "Amp Capability",
-			"code": "ac",
-			"type": "bool"
-		},
-		{
-			"name": "Under Stage Capability?",
-			"code": "usc",
-			"type": "bool"
-		}, 
-		{
-			"name": "Source Pickup",
-			"code": "sp",
-			"type": "bool"
-		},
-		{
+		},	
+			{
 			"name": "Died/Tipped",
 			"code": "die",
 			"type": "bool"
