@@ -21,8 +21,8 @@ var options = {
 };
 
 // Must be filled in: e=event, m=match#, l=level(q,qf,sf,f), t=team#, r=robot(r1,r2,b1..), s=scouter
-//var requiredFields = ["e", "m", "l", "t", "r", "s", "as"];
-var requiredFields = ["e", "m", "l", "r", "s", "as"];
+//var requiredFields = ["e", "m", "l", "t", "r", "s", "as" ];
+var requiredFields = ["e", "m", "l", "r", "s", "asl",]
 
 function addTimer(table, idx, name, data) {
   var row = table.insertRow(idx);
@@ -1016,7 +1016,25 @@ function validateData() {
     alert("Enter all required values\n" + errStr);
   }
   return ret
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function getData(useStr) {
   var str = ''
