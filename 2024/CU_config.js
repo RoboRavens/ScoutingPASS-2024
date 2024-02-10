@@ -60,7 +60,7 @@ var config_data = `
 			"min": 1,
 			"max": 99999
 		},
-				{
+	           {
 			"name": "Preload",
 			"code": "pr",
 			"type": "radio",
@@ -69,7 +69,8 @@ var config_data = `
 				"n": "No"
 				
 			},
-			"defaultValue": "x"
+			"defaultValue": "x",
+			"required": "true"
 		},
 		{
 			"name": "Auto Start Position",
