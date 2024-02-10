@@ -104,6 +104,11 @@ var config_data = `
 		"code": "as",
 		"type": "counter"
 		},
+  		{
+		"name": "Misses",
+		"code": "am",
+		"type": "counter"
+		},
 		{
 			"name": "Under Stage?",
 			"code": "us",
