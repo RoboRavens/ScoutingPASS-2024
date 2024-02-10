@@ -173,7 +173,7 @@ if(data.code == "tct") {
   ampButton.setAttribute("id", "amper_" + data.code);
   ampButton.setAttribute("type", "button");
   ampButton.setAttribute("onclick", "newCycle(this.parentElement); addShotTypeAmpScore(this.parentElement); addXToFinalArray()");
-  ampButton.setAttribute("value", "Amp Score");
+  ampButton.setAttribute("value", "Scored in Amp");
   ampButton.setAttribute('style', "margin-top: 10px; margin-bottom: 1px; Background-color: #D23232; width: 200px; height: 50px");
   cell.appendChild(ampButton);
 
