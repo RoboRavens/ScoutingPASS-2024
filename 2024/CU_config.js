@@ -100,16 +100,10 @@ var config_data = `
 			"cycleTimer": "act"
 		},
 		{
-		"name": "Scores",
+		"name": "Shots",
 		"code": "as",
 		"type": "counter"
 		},
-		{
-			"name": "Misses",
-			"code": "am",
-			"type": "counter"
-			},
-
 		{
 			"name": "Under Stage?",
 			"code": "us",
