@@ -136,11 +136,14 @@ function addTimer(table, idx, name, data) {
   cell.appendChild(button4);
   }
    
+
+  
 if(data.code == "tct") {
+
   var button1 = document.createElement("input");
   button1.setAttribute("id", "start_" + data.code);
   button1.setAttribute("type", "button");
-  button1.setAttribute("onclick", "timer(this.parentElement)");
+  button1.setAttribute("onclick", "timer(this.parentElement); blurPickup()");
   button1.setAttribute("value", "Start");
   button1.setAttribute('style', "Background-color: #4f884f");
   cell.appendChild(button1);
@@ -148,7 +151,7 @@ if(data.code == "tct") {
  var button2 = document.createElement("input");
   button2.setAttribute("id", "cycle_" + data.code);
   button2.setAttribute("type", "button");
-  button2.setAttribute("onclick", "newCycle(this.parentElement)");
+  button2.setAttribute("onclick", "newCycle(this.parentElement); blurCanvas(); blurPickup()");
   button2.setAttribute("value", "Pickup");
   cell.appendChild(button2);
   cell.appendChild(button2);
@@ -369,7 +372,8 @@ function addClickableImage(table, idx, name, data) {
   cell.setAttribute("style", "text-align: center;");
   var canvas = document.createElement('canvas');
   //canvas.onclick = onFieldClick;
-  canvas.setAttribute("onclick", "onFieldClick(event)");
+
+  canvas.setAttribute("onclick", "onFieldClick(event); blurAmn()");
   canvas.setAttribute("class", "field-image-src");
   canvas.setAttribute("id", "canvas_" + data.code);
   canvas.innerHTML = "No canvas support";
@@ -538,23 +542,24 @@ function addButton(table, idx, name, data) {
   var button1 = document.createElement("input");
   button1.setAttribute("id", "amped_" + data.code);
   button1.setAttribute("type", "button");
-  button1.setAttribute("onclick", "addShotTypeAmped(this.parentElement)");
+  button1.setAttribute("onclick", "addShotTypeAmped(this.parentElement); blurAmn()");
   button1.setAttribute("value", "Amped");
   cell.appendChild(button1);
 
   var button2 = document.createElement("input");
   button2.setAttribute("id", "miss_" + data.code);
   button2.setAttribute("type", "button");
-  button2.setAttribute("onclick", "addShotTypeMiss(this.parentElement)");
+  button2.setAttribute("onclick", "addShotTypeMiss(this.parentElement); blurAmn()");
   button2.setAttribute("value", "Miss");
   cell.appendChild(button2);
 
   var button3 = document.createElement("input");
   button3.setAttribute("id", "normal_" + data.code);
   button3.setAttribute("type", "button");
-  button3.setAttribute("onclick", "addShotTypeNormal(this.parentElement)");
+  button3.setAttribute("onclick", "addShotTypeNormal(this.parentElement); blurAmn()");
   button3.setAttribute("value", "Normal");
   cell.appendChild(button3);
+  
 }
 
 function addText(table, idx, name, data) {
@@ -1110,7 +1115,6 @@ function updateQRHeader() {
   document.getElementById("display_qr-info").textContent = str;
 }
 
-
 function qr_regenerate() {
   // Validate required pre-match date (event, match, level, robot, scouter)
   if (validateData() == false) {
@@ -1381,7 +1385,13 @@ function onFieldClick(event) {
     }
     // If associated with cycleTimer - send New Cycle EVENT
     if (cycleTimer != null) {
-      document.getElementById("cycle_" + cycleTimer.value).click();
+      var element = document.getElementById("cycle_" + cycleTimer.value);
+
+      if (element) {
+          var clickEvent = document.createEvent('MouseEvents');
+          clickEvent.initEvent('click', true, true);
+          element.dispatchEvent(clickEvent);
+      }
     }
   }
 
@@ -1676,7 +1686,62 @@ function copyData(){
   document.getElementById('copyButton').setAttribute('value','Copied');
 }
 
+function blurCanvas() {
+  var canvas = document.getElementById('canvas_ss');
+  var amper = document.getElementById('amper_tct');
+  
+  canvas.classList.toggle('blurred');
+  amper.classList.toggle('blurred');
+
+}
+
+function blurAmn() {
+  var amped = document.getElementById('amped_amn');
+  var miss = document.getElementById('miss_amn');
+  var normal = document.getElementById('normal_amn');
+  var display = document.getElementById('display_amn')
+  
+  amped.classList.toggle('blurred');
+  miss.classList.toggle('blurred');
+  normal.classList.toggle('blurred');
+  display.classList.toggle('blurred');
+}
+
+function unblurAmn() {
+  var amped = document.getElementById('amped_amn');
+  var miss = document.getElementById('miss_amn');
+  //var normal = document.getElementById('normal_amn');
+  var display = document.getElementById('display_amn')
+  
+  amped.classList.add('blurred');
+  miss.classList.add('blurred');
+  //normal.classList.toggle('blurred');
+  display.classList.add('blurred');
+}
+
+function blurPickup() {
+  var cycle = document.getElementById('cycle_tct');
+
+  cycle.classList.toggle('blurred');
+}
+
+function blurAll() {
+  blurAmn()
+  blurCanvas()
+  blurPickup()
+
+  var undo = document.getElementById('undo_tct')
+  var undo2 = document.getElementById('undo_ss')
+  var flip = document.getElementById('flip_ss')
+  
+  undo.classList.toggle('blurred');
+  undo2.classList.toggle('blurred');
+  flip.classList.toggle('blurred');
+
+}
+
 window.onload = function () {
+  
   var ret = configure();
   if (ret != -1) {
     var ec = document.getElementById("input_e").value;
@@ -1688,4 +1753,6 @@ window.onload = function () {
       setUpGoogleSheets();
     }
   }
+
+  blurAll()
 };
