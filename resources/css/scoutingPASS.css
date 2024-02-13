@@ -26,15 +26,11 @@ html, body{
 
     font-family : -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
     text-align: center;
-    color: rgb(57, 182, 255);
+    color: #FFFFFF;
     font-size: 13px;
     font-style: bold;
     letter-spacing: 1px;
-    border-width: 4px;
-    border-style: solid;
-    border-color: rgb(0, 162, 255);
-    border-radius: 25px;
-    background-color: black;
+    background-color: #121212;
 }
 
 #postmatch_table {
