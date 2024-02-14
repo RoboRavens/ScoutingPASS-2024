@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap');
 
+/* https://uxplanet.org/8-tips-for-dark-theme-design-8dfc2f8f7ab6 */
+
 @font-face {
     font-family: 'Alexis';
     font-style: normal;
@@ -45,7 +47,7 @@ html, body{
 
 #auton_table, #teleop_table {
     font-family : -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
-    color: #FFFFFF;
+    color: #E5c454;
     font-size: 13px;
     font-style: bold;
     letter-spacing: 1px;
@@ -57,9 +59,6 @@ html, body{
     font-size: 16px;
 }
 
-
-
-/* Style the Start button */
 /* Style the Start button */
 
 #start_tct {
@@ -107,6 +106,17 @@ html, body{
   padding: 20px;
 }
 /* style the buttons in the auto cycle timer*/
+#input_act {
+    background-color: rgba(101, 101, 101, 0.3);
+    color: rgba(255, 255, 255, 0.6);
+    border: black;
+    text-align: center;
+    Width: 70px;
+    height: 47px;
+    font-weight: bolder;
+    font-size: medium;
+}
+
 #cycle_act {
     background-color: #46BCDE;
     color: white;
@@ -114,16 +124,22 @@ html, body{
     padding: 20px;
   }
   #undo_act {
-    background-color: #46BCDE;
-    color: white;
+    background-color: rgba(233, 79, 100, 0.3);
+    color: #e94f64;
     border: black;
-    padding: 20px;
+    width: 100px;
+    height: 50px;
+    font-weight: bolder;
+    font-size: large;
   }
   #start_act{
-    background-color: #46BCDE;
-    color: white;
+    background-color: rgba(82, 210, 115, 0.3);
+    color: #52d273;
     border: black;
-    padding: 20px;
+    width: 100px;
+    height: 50px;
+    font-weight: bolder;
+    font-size: large;
   }
 /* Style the Undo button */
 #undo_tct {
@@ -132,13 +148,6 @@ html, body{
   border: black;
   padding: 20px;
 }
-
-
-
-
-
-
-
     
 .field-image {
     margin: 2vw;
@@ -303,6 +312,7 @@ input {
     font: roboto;
     font-weight: medium;
     color: #FFFFFF;
+    opacity: 0.87;
 	text-align: center-left;
     background-color: #656565;
 }
@@ -318,7 +328,7 @@ input[type=radio] {
 }
 
 input[type=radio]:checked {
-  background-color: #52D273;
+  background-color: #52d273;
 }
 
 input[type=radio]:focus {
@@ -335,8 +345,11 @@ input[type=checkbox] {
 }
 
 input[type=checkbox]:checked {
-  background: url(data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==) no-repeat center center;
+  background-color: #46BCDE;
   background-size: 40px 40px;
+  -ms-transform: scaleX(-1) rotate(-35deg); /* IE 9 */
+  -webkit-transform: scaleX(-1) rotate(-35deg); /* Chrome, Safari, Opera */
+  transform: scaleX(-1) rotate(-35deg);
 }
 
 input[type=checkbox]:focus {

@@ -73,7 +73,7 @@ function addTimer(table, idx, name, data) {
   } else {
     inp.setAttribute("name", data.code);
   }
-  inp.setAttribute("style", "background-color: black; color: white;border: none; text-align: center;");
+  //inp.setAttribute("style", "background-color: black; color: white;border: none; text-align: center;");
   inp.setAttribute("disabled", "");
   inp.setAttribute("value", 0);
   inp.setAttribute("size", 7);
@@ -187,7 +187,7 @@ if(data.code == "act") {
   button1.setAttribute("type", "button");
   button1.setAttribute("onclick", "timer(this.parentElement)");
   button1.setAttribute("value", "Start");
-  button1.setAttribute('style', "Background-color: #4f884f");	
+  //button1.setAttribute('style', "Background-color: #4f884f");	
   cell.appendChild(button1);
   cell.appendChild(inp);
   
@@ -209,7 +209,7 @@ if(data.code == "act") {
   button3.setAttribute("type", "button");
   button3.setAttribute("onclick", "undoCycle(this.parentElement)");
   button3.setAttribute("value", "Undo");
-  button3.setAttribute('style', "Background-color: #D23232");
+  //button3.setAttribute('style', "Background-color: #D23232");
   cell.appendChild(button3);
   
   
@@ -256,7 +256,7 @@ function addCounter(table, idx, name, data) {
     return idx + 1;
   }
   var cell2 = row.insertCell(1);
-  cell1.innerHTML = name + '&nbsp;';
+  cell1.innerHTML = name;
   if (data.hasOwnProperty('tooltip')) {
     cell1.setAttribute("title", data.tooltip);
   }
@@ -266,7 +266,8 @@ function addCounter(table, idx, name, data) {
   button1.setAttribute("type", "button");
   button1.setAttribute("onclick", "counter(this.parentElement, -1)");
   button1.setAttribute("value", "-");
-  button1.setAttribute("style", "color: white; background-color: #7514D5; padding-right: 25px; padding-left: 25px; padding-top: 28px; padding-bottom: 28px");
+  button1.setAttribute("style", "background-color: rgba(233, 79, 100, 0.3); color: #e94f64; border: black; width: 55px; height: 75px; font-weight: bolder; font-size: large;");
+  
   cell2.appendChild(button1);
 
   var inp = document.createElement("input");
@@ -278,7 +279,7 @@ function addCounter(table, idx, name, data) {
   } else {
     inp.setAttribute("name", data.code);
   }
-  inp.setAttribute("style", "background-color: #2F4F4F; color: white; font-weight: bold; border: none; text-align: center; padding-right: 10px; padding-left: 10px; padding-top: 30px; padding-bottom: 30px");
+  inp.setAttribute("style", "background-color: rgba(101, 101, 101, 0.3); color: rgba(255, 255, 255, 0.6); border: black; text-align: center; Width: 75px; height: 74px; font-weight: bolder; font-size: medium;");
   inp.setAttribute("disabled", "");
   inp.setAttribute("value", 0);
   inp.setAttribute("size", 2);
@@ -289,7 +290,7 @@ function addCounter(table, idx, name, data) {
   button2.setAttribute("type", "button");
   button2.setAttribute("onclick", "counter(this.parentElement, 1)");
   button2.setAttribute("value", "+");
-  button2.setAttribute("style", "background-color: #1F61E6; padding-right: 25px; padding-left: 25px; padding-top: 28px; padding-bottom: 28px");
+  button2.setAttribute("style", "background-color: rgba(82, 210, 115, 0.3); color: #52d273; border: black; width: 55px; height: 75px; font-weight: bolder; font-size: large");
   cell2.appendChild(button2);
 
   if (data.hasOwnProperty('defaultValue')) {
@@ -759,7 +760,7 @@ function addCheckbox(table, idx, name, data) {
   cell2.appendChild(inp);
 
   if (data.type == 'bool') {
-    cell2.innerHTML += "(checked = Yes)";
+    cell2.innerHTML += "   (checked = Yes)";
   }
 
   if (data.hasOwnProperty('defaultValue')) {
