@@ -156,9 +156,15 @@ var config_data = `
 			"defaultValue": "x"
 		},
 		{
-			"name": "Trap?",
+			"name": "Trap",
 			"code": "tr",
-			"type": "bool"
+			"type": "radio",
+			"choices": {
+				"s": "Success<br>",
+				"f": "Attempted but failed<br>",
+				"x": "Not attempted"
+			},
+			"defaultValue": "x"
 		},
 		
 		{

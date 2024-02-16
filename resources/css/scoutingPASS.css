@@ -62,10 +62,13 @@ html, body{
 /* Style the Start button */
 
 #start_tct {
-  background-color: rgb(37, 99, 235);
-  color: white;
-  border: black;
-  padding: 20px;
+    background-color: rgba(82, 210, 115, 0.3);
+    color: #52d273;
+    border: black;
+    width: 100px;
+    height: 50px;
+    font-weight: bolder;
+    font-size: large;
 }
 /* Style the Amped Normal Miss Buttons */
 #miss_amn {
@@ -100,10 +103,13 @@ html, body{
 
 /* Style the Pickup button */
 #cycle_tct {
-  background-color: #46BCDE;
-  color: white;
-  border: black;
-  padding: 20px;
+    background-color: rgba(70, 188, 222, 0.3);
+    color: #46BCDE;
+    border: black;
+    width: 100px;
+    height: 50px;
+    font-weight: bolder;
+    font-size: large;
 }
 /* style the buttons in the auto cycle timer*/
 #input_act {

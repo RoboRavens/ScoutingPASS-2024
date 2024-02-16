@@ -1755,5 +1755,5 @@ window.onload = function () {
     }
   }
 
-  blurAll()
+  //blurAll()
 };
