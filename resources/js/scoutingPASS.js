@@ -44,21 +44,6 @@ function addTimer(table, idx, name, data) {
   cell = row.insertCell(0);
   cell.setAttribute("colspan", 2);
   cell.setAttribute("style", "text-align: center;");
-  if (data.type == 'cycle') {
-    var ct = document.createElement('input');
-    ct.setAttribute("type", "hidden");
-    ct.setAttribute("id", "cycletime_" + data.code);
-    ct.setAttribute("value", "[]");
-    cell.appendChild(ct);
-    ct = document.createElement('input');
-    ct.setAttribute("type", "text");
-    ct.setAttribute("id", "display_" + data.code);
-    ct.setAttribute("value", "");
-    ct.setAttribute("disabled", "");
-    cell.appendChild(ct);
-    var lineBreak = document.createElement("br");
-    cell.appendChild(lineBreak);
-  }
 
   var inp = document.createElement("input");
   if (data.type == 'timer') {
@@ -79,6 +64,22 @@ function addTimer(table, idx, name, data) {
   inp.setAttribute("size", 7);
   inp.setAttribute("maxLength", 7);
   
+  if (data.type == 'cycle') {
+    var ct = document.createElement('input');
+    ct.setAttribute("type", "hidden");
+    ct.setAttribute("id", "cycletime_" + data.code);
+    ct.setAttribute("value", "[]");
+    cell.appendChild(ct);
+    ct = document.createElement('input');
+    ct.setAttribute("type", "text");
+    ct.setAttribute("id", "display_" + data.code);
+    ct.setAttribute("value", "");
+    ct.setAttribute("disabled", "");
+    cell.appendChild(ct);
+    var lineBreak = document.createElement("br");
+    cell.appendChild(lineBreak);
+  }
+
   if(data.code == "ddt") {
   var button1 = document.createElement("input");
   button1.setAttribute("id", "start_" + data.code);
@@ -145,10 +146,18 @@ if(data.code == "tct") {
   button1.setAttribute("type", "button");
   button1.setAttribute("onclick", "timer(this.parentElement); blurPickup()");
   button1.setAttribute("value", "Start");
-  button1.setAttribute('style', "Background-color: #4f884f");
   cell.appendChild(button1);
   cell.appendChild(inp);
- var button2 = document.createElement("input");
+  
+  var button3 = document.createElement("input");
+  button3.setAttribute("id", "undo_" + data.code);
+  button3.setAttribute("type", "button");
+  button3.setAttribute("onclick", "undoCycle(this.parentElement)");
+  button3.setAttribute("value", "Undo");
+
+  cell.appendChild(button3);
+
+  var button2 = document.createElement("input");
   button2.setAttribute("id", "cycle_" + data.code);
   button2.setAttribute("type", "button");
   button2.setAttribute("onclick", "newCycle(this.parentElement); blurCanvas(); blurPickup()");
@@ -160,13 +169,6 @@ if(data.code == "tct") {
   //var lineBreak = document.createElement("br");
   //cell.appendChild(lineBreak);
   
-  var button2 = document.createElement("input");
-  button2.setAttribute("id", "undo_" + data.code);
-  button2.setAttribute("type", "button");
-  button2.setAttribute("onclick", "undoCycle(this.parentElement)");
-  button2.setAttribute("value", "Undo");
-  button2.setAttribute('style', "margin-left: 20px; Background-color: #D23232");
-  cell.appendChild(button2);
   
   
   var lineBreak = document.createElement("br");
@@ -177,7 +179,6 @@ if(data.code == "tct") {
   ampButton.setAttribute("type", "button");
   ampButton.setAttribute("onclick", "newCycle(this.parentElement); addShotTypeAmpScore(this.parentElement); addXToFinalArray()");
   ampButton.setAttribute("value", "Scored in Amp");
-  ampButton.setAttribute('style', "margin-top: 10px; margin-bottom: 1px; Background-color: #D23232; width: 200px; height: 50px");
   cell.appendChild(ampButton);
 
 }
@@ -215,9 +216,10 @@ if(data.code == "act") {
   
   var lineBreak = document.createElement("br");
   cell.appendChild(lineBreak);
-
   
 }
+
+
 
   idx += 1
   row = table.insertRow(idx);
@@ -319,52 +321,7 @@ function addClickableImage(table, idx, name, data) {
     cell.setAttribute("title", data.tooltip);
   }
 
-  let showFlip = true;
-  if (data.hasOwnProperty('showFlip')) {
-    if (data.showFlip.toLowerCase() == 'false') {
-      showFlip = false;
-    }
-  }
-
-  let showUndo = true;
-  if (data.hasOwnProperty('showUndo')) {
-    if (data.showUndo.toLowerCase() == 'false') {
-      showUndo = false;
-    }
-  }
-
-  if (showFlip || showUndo) {
-    idx += 1
-    row = table.insertRow(idx);
-    cell = row.insertCell(0);
-    cell.setAttribute("colspan", 2);
-    cell.setAttribute("style", "text-align: center;");
-
-    if (showUndo) {
-      // Undo button
-      let undoButton = document.createElement("input");
-      undoButton.setAttribute("type", "button");
-      undoButton.setAttribute("onclick", "undo(this.parentElement)");
-      undoButton.setAttribute("value", "Undo");
-      undoButton.setAttribute("id", "undo_" + data.code);
-      undoButton.setAttribute("class", "undoButton");
-      cell.appendChild(undoButton);
-    }
-
-    if (showFlip) {
-      // Flip button
-      let flipButton = document.createElement("input");
-      flipButton.setAttribute("type", "button");
-      flipButton.setAttribute("onclick", "flip(this.parentElement)");
-      flipButton.setAttribute("value", "Flip Image");
-      flipButton.setAttribute("id", "flip_" + data.code);
-      flipButton.setAttribute("class", "flipButton");
-      if (showUndo) {
-        flipButton.setAttribute("margin-left", '8px');
-      }
-      cell.appendChild(flipButton);
-    }
-  }
+  
 
   idx += 1;
   row = table.insertRow(idx);
@@ -475,6 +432,53 @@ function addClickableImage(table, idx, name, data) {
   img.setAttribute("onload", "drawFields()");
   img.setAttribute("hidden", "");
   cell.appendChild(img);
+
+  let showFlip = true;
+  if (data.hasOwnProperty('showFlip')) {
+    if (data.showFlip.toLowerCase() == 'false') {
+      showFlip = false;
+    }
+  }
+
+  let showUndo = true;
+  if (data.hasOwnProperty('showUndo')) {
+    if (data.showUndo.toLowerCase() == 'false') {
+      showUndo = false;
+    }
+  }
+
+  if (showFlip || showUndo) {
+    idx += 1
+    row = table.insertRow(idx);
+    cell = row.insertCell(0);
+    cell.setAttribute("colspan", 2);
+    cell.setAttribute("style", "text-align: center;");
+
+    if (showUndo) {
+      // Undo button
+      let undoButton = document.createElement("input");
+      undoButton.setAttribute("type", "button");
+      undoButton.setAttribute("onclick", "undo(this.parentElement)");
+      undoButton.setAttribute("value", "Undo");
+      undoButton.setAttribute("id", "undo_" + data.code);
+      undoButton.setAttribute("class", "undoButton");
+      cell.appendChild(undoButton);
+    }
+
+    if (showFlip) {
+      // Flip button
+      let flipButton = document.createElement("input");
+      flipButton.setAttribute("type", "button");
+      flipButton.setAttribute("onclick", "flip(this.parentElement)");
+      flipButton.setAttribute("value", "Flip Image");
+      flipButton.setAttribute("id", "flip_" + data.code);
+      flipButton.setAttribute("class", "flipButton");
+      if (showUndo) {
+        flipButton.setAttribute("margin-left", '8px');
+      }
+      cell.appendChild(flipButton);
+    }
+  }
 
   return idx + 1
 }

@@ -122,7 +122,7 @@ var config_data = `
 			"type": "cycle"
 		},
 		{
-			"name": "Shooting Spot",
+			"name": "Shooting Location:",
 			"code": "ss",
 			"type": "field_image",
 			"filename": "2024/field_image.png",

@@ -62,7 +62,7 @@ html, body{
 
 /* Style the Start button */
 
-#start_tct {
+#start_tct{
     background-color: rgba(82, 210, 115, 0.3);
     color: #52d273;
     border: black;
@@ -70,28 +70,7 @@ html, body{
     height: 50px;
     font-weight: bolder;
     font-size: large;
-}
-/* Style the Amped Normal Miss Buttons */
-#miss_amn {
-    background-color: #D23232;
-    color: white;
-    border: purple;
-    padding: 10px;
-}
-#amped_amn {
-    background-color: #4f884f;
-    color: white;
-    border: purple;
-    padding: 5px;
-    padding-right: 10px
-}
-#normal_amn {
-    background-color: rgb(37, 99, 235);
-    color: white;
-    border: purple;
-    padding: 5px;
-}
-
+  }
 
 
 /* Style the Reset button */
@@ -107,11 +86,24 @@ html, body{
     background-color: rgba(70, 188, 222, 0.3);
     color: #46BCDE;
     border: black;
-    width: 100px;
+    width: 285px;
     height: 50px;
     font-weight: bolder;
     font-size: large;
+    margin-top: 2px;
 }
+
+#amper_tct {
+    background-color: rgba(229, 196, 84, 0.3);
+    color: #E5c454;
+    border: black;
+    width: 285px;
+    height: 50px;
+    font-weight: bolder;
+    font-size: large;
+    margin-top: 20px;
+}
+
 /* style the buttons in the auto cycle timer*/
 #input_act {
     background-color: rgba(101, 101, 101, 0.3);
@@ -122,6 +114,39 @@ html, body{
     height: 47px;
     font-weight: bolder;
     font-size: medium;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#input_tct {
+    background-color: rgba(101, 101, 101, 0.3);
+    color: rgba(255, 255, 255, 0.6);
+    border: black;
+    text-align: center;
+    Width: 70px;
+    height: 47px;
+    font-weight: bolder;
+    font-size: medium;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#display_act {
+    padding-right: 44px;
+    padding-left: 44px;
+    margin-bottom: 2px;
+}
+
+#display_tct {
+    margin-bottom: 2px;
+    padding-right: 44px;
+    padding-left: 44px;
+}
+
+#display_amn {
+    margin-bottom: 2px;
+    padding-right: 44px;
+    padding-left: 44px;
 }
 
 #cycle_act {
@@ -139,6 +164,8 @@ html, body{
     font-weight: bolder;
     font-size: large;
   }
+
+  
   #start_act{
     background-color: rgba(82, 210, 115, 0.3);
     color: #52d273;
@@ -148,13 +175,55 @@ html, body{
     font-weight: bolder;
     font-size: large;
   }
+
+  #amped_amn {
+    background-color: rgba(82, 210, 115, 0.3);
+    color: #52d273;
+    border: black;
+    width: 85px;
+    height: 50px;
+    font-weight: bolder;
+    font-size: large;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  #miss_amn {
+    background-color: rgba(233, 79, 100, 0.3);
+    color: #e94f64;
+    border: black;
+    width: 85px;
+    height: 50px;
+    font-weight: bolder;
+    font-size: large;
+    margin-right: 7px;
+    margin-left: 7px;
+  }
+
+  #normal_amn {
+    background-color: rgba(70, 188, 222, 0.3);
+    color: #46BCDE;
+    border: black;
+    width: 85px;
+    height: 50px;
+    font-weight: bolder;
+    font-size: large;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  
+
 /* Style the Undo button */
 #undo_tct {
-  background-color: #46BCDE;
-  color: white;
-  border: black;
-  padding: 20px;
-}
+    background-color: rgba(233, 79, 100, 0.3);
+    color: #e94f64;
+    border: black;
+    width: 100px;
+    height: 50px;
+    font-weight: bolder;
+    font-size: large;
+  }
     
 .field-image {
     margin: 2vw;
@@ -264,12 +333,27 @@ h2{
     color: black;
 }
 
-.undoButton, .flipButton {
-    font-family: Alexis;
-    background-color: #46BCDE; 
-    padding: 10px;
-    color: black;
-    margin-left: 20px;
+.undoButton {
+    background-color: rgba(233, 79, 100, 0.3);
+    color: #e94f64;
+    border: black;
+    width: 100px;
+    height: 40px;
+    font-weight: bolder;
+    font-size: large;
+    margin-right: 20px;
+    margin-top: -20px;
+}
+
+.flipButton {
+    background-color: rgba(70, 188, 222, 0.3);
+    color: #46BCDE;
+    border: black;
+    width: 183px;
+    height: 40px;
+    font-weight: bolder;
+    font-size: large;
+    margin-top: -20px;
 }
 
 #prevButton7, #prevButton8, #prevButton9{
