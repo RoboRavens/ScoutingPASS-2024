@@ -436,11 +436,11 @@ input[type=checkbox] {
 }
 
 input[type=checkbox]:checked {
-  background-color: #46BCDE;
+  background-color: #52d273;
   background-size: 40px 40px;
-  -ms-transform: scaleX(-1) rotate(-35deg); /* IE 9 */
-  -webkit-transform: scaleX(-1) rotate(-35deg); /* Chrome, Safari, Opera */
-  transform: scaleX(-1) rotate(-35deg);
+  -ms-transform: scaleX(-5) rotate(-5deg); /* IE 9 */
+  -webkit-transform: scaleX(-5) rotate(-5deg); /* Chrome, Safari, Opera */
+  transform: scaleX(-1) rotate(-5deg);
 }
 
 input[type=checkbox]:focus {
