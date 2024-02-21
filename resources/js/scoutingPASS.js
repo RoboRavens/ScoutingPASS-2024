@@ -177,7 +177,7 @@ if(data.code == "tct") {
   var ampButton = document.createElement("input");
   ampButton.setAttribute("id", "amper_" + data.code);
   ampButton.setAttribute("type", "button");
-  ampButton.setAttribute("onclick", "newCycle(this.parentElement); addShotTypeAmpScore(this.parentElement); addXToFinalArray()");
+  ampButton.setAttribute("onclick", "newCycle(this.parentElement); addShotTypeAmpScore(this.parentElement); addXToFinalArray(); blurPickup(); blurCanvas()");
   ampButton.setAttribute("value", "Scored in Amp");
   cell.appendChild(ampButton);
 
@@ -1759,5 +1759,5 @@ window.onload = function () {
     }
   }
 
-  //blurAll()
+  blurAll()
 };

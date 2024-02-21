@@ -10,11 +10,11 @@
     src: url("../fonts/alexisv3.ttf") format('truetype');
 }
 
-/*.blurred {
-    filter: blur(2px); 
+.blurred {
+    filter: blur(3px); 
     pointer-events: none;
 }
-*/
+
 html, body{
     height: 100%;
     width: 100%;
