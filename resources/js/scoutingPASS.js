@@ -177,7 +177,7 @@ if(data.code == "tct") {
   var ampButton = document.createElement("input");
   ampButton.setAttribute("id", "amper_" + data.code);
   ampButton.setAttribute("type", "button");
-  ampButton.setAttribute("onclick", "newCycle(this.parentElement); addShotTypeAmpScore(this.parentElement); addXToFinalArray(); blurPickup(); blurCanvas()");
+  ampButton.setAttribute("onclick", "newCycle(this.parentElement); addShotTypeAmpScore(this.parentElement); addXToFinalArray(); blurCanvas(); blurPickup()");
   ampButton.setAttribute("value", "Scored in Amp");
   cell.appendChild(ampButton);
 
@@ -331,7 +331,7 @@ function addClickableImage(table, idx, name, data) {
   var canvas = document.createElement('canvas');
   //canvas.onclick = onFieldClick;
 
-  canvas.setAttribute("onclick", "onFieldClick(event); blurAmn()");
+  canvas.setAttribute("onclick", "onFieldClick(event); blurAmn(); blurPickup()");
   canvas.setAttribute("class", "field-image-src");
   canvas.setAttribute("id", "canvas_" + data.code);
   canvas.innerHTML = "No canvas support";
@@ -458,7 +458,7 @@ function addClickableImage(table, idx, name, data) {
       // Undo button
       let undoButton = document.createElement("input");
       undoButton.setAttribute("type", "button");
-      undoButton.setAttribute("onclick", "undo(this.parentElement)");
+      undoButton.setAttribute("onclick", "undo(this.parentElement); blurCanvas(); blurAmn()");
       undoButton.setAttribute("value", "Undo");
       undoButton.setAttribute("id", "undo_" + data.code);
       undoButton.setAttribute("class", "undoButton");
@@ -544,26 +544,26 @@ function addButton(table, idx, name, data) {
 
   //BUTTONS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
   
+  var button3 = document.createElement("input");
+  button3.setAttribute("id", "normal_" + data.code);
+  button3.setAttribute("type", "button");
+  button3.setAttribute("onclick", "addShotTypeNormal(this.parentElement); blurAmn(); blurPickup()");
+  button3.setAttribute("value", "Normal");
+  cell.appendChild(button3);
+
   var button1 = document.createElement("input");
   button1.setAttribute("id", "amped_" + data.code);
   button1.setAttribute("type", "button");
-  button1.setAttribute("onclick", "addShotTypeAmped(this.parentElement); blurAmn()");
+  button1.setAttribute("onclick", "addShotTypeAmped(this.parentElement); blurAmn(); blurPickup()");
   button1.setAttribute("value", "Amped");
   cell.appendChild(button1);
 
   var button2 = document.createElement("input");
   button2.setAttribute("id", "miss_" + data.code);
   button2.setAttribute("type", "button");
-  button2.setAttribute("onclick", "addShotTypeMiss(this.parentElement); blurAmn()");
+  button2.setAttribute("onclick", "addShotTypeMiss(this.parentElement); blurAmn(); blurPickup()");
   button2.setAttribute("value", "Miss");
   cell.appendChild(button2);
-
-  var button3 = document.createElement("input");
-  button3.setAttribute("id", "normal_" + data.code);
-  button3.setAttribute("type", "button");
-  button3.setAttribute("onclick", "addShotTypeNormal(this.parentElement); blurAmn()");
-  button3.setAttribute("value", "Normal");
-  cell.appendChild(button3);
   
 }
 
@@ -1694,9 +1694,14 @@ function copyData(){
 function blurCanvas() {
   var canvas = document.getElementById('canvas_ss');
   var amper = document.getElementById('amper_tct');
+  var undo2 = document.getElementById('undo_ss');
+  var flip = document.getElementById('flip_ss');
+  
   
   canvas.classList.toggle('blurred');
   amper.classList.toggle('blurred');
+  undo2.classList.toggle('blurred');
+  flip.classList.toggle('blurred');
 
 }
 
@@ -1704,7 +1709,7 @@ function blurAmn() {
   var amped = document.getElementById('amped_amn');
   var miss = document.getElementById('miss_amn');
   var normal = document.getElementById('normal_amn');
-  var display = document.getElementById('display_amn')
+  var display = document.getElementById('display_amn');
   
   amped.classList.toggle('blurred');
   miss.classList.toggle('blurred');
@@ -1716,7 +1721,7 @@ function unblurAmn() {
   var amped = document.getElementById('amped_amn');
   var miss = document.getElementById('miss_amn');
   //var normal = document.getElementById('normal_amn');
-  var display = document.getElementById('display_amn')
+  var display = document.getElementById('display_amn');
   
   amped.classList.add('blurred');
   miss.classList.add('blurred');
@@ -1726,22 +1731,15 @@ function unblurAmn() {
 
 function blurPickup() {
   var cycle = document.getElementById('cycle_tct');
-
+  var undo = document.getElementById('undo_tct');
   cycle.classList.toggle('blurred');
+  undo.classList.toggle('blurred');
 }
 
 function blurAll() {
   blurAmn()
   blurCanvas()
   blurPickup()
-
-  var undo = document.getElementById('undo_tct')
-  var undo2 = document.getElementById('undo_ss')
-  var flip = document.getElementById('flip_ss')
-  
-  undo.classList.toggle('blurred');
-  undo2.classList.toggle('blurred');
-  flip.classList.toggle('blurred');
 
 }
 

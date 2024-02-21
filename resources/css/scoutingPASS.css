@@ -15,6 +15,11 @@
     pointer-events: none;
 }
 
+.blurredLess {
+    filter: blur(1px); 
+    pointer-events: all;
+}
+
 html, body{
     height: 100%;
     width: 100%;
