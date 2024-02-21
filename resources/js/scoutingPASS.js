@@ -1737,9 +1737,28 @@ function blurPickup() {
 }
 
 function blurAll() {
-  blurAmn()
-  blurCanvas()
-  blurPickup()
+  var amped = document.getElementById('amped_amn');
+  var miss = document.getElementById('miss_amn');
+  var normal = document.getElementById('normal_amn');
+  var display = document.getElementById('display_amn');
+  amped.classList.add('blurred');
+  miss.classList.add('blurred');
+  normal.classList.add('blurred');
+  display.classList.add('blurred');  
+
+  var canvas = document.getElementById('canvas_ss');
+  var amper = document.getElementById('amper_tct');
+  var undo2 = document.getElementById('undo_ss');
+  var flip = document.getElementById('flip_ss');
+  canvas.classList.add('blurred');
+  amper.classList.add('blurred');
+  undo2.classList.add('blurred');
+  flip.classList.add('blurred');
+  
+  var cycle = document.getElementById('cycle_tct');
+  var undo = document.getElementById('undo_tct');
+  cycle.classList.add('blurred');
+  undo.classList.add('blurred');  
 
 }
 
