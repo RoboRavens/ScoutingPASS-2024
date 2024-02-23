@@ -26,7 +26,7 @@ html, body{
     width: 100%;
     margin: 0;
     padding: 0;
-    color: #0068B3;
+    color: 00ABFF;
     background-color: black;
 }
 
@@ -34,7 +34,7 @@ html, body{
 
     font-family : -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
     text-align: center;
-    color: #E5c454;
+    color: #00ABFF
     font-size: 13px;
     font-style: bold;
     letter-spacing: .8px;
@@ -45,7 +45,7 @@ html, body{
 
     font-family : -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
     text-align: center;
-    color: #E5c454;
+    color: #00ABFF;
     font-size: 13px;
     font-style: bold;
     letter-spacing: 1px;
@@ -54,7 +54,7 @@ html, body{
 
 #auton_table, #teleop_table {
     font-family : -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
-    color: #E5c454;
+    color: #00ABFF;
     font-size: 13px;
     font-style: bold;
     letter-spacing: 1px;
@@ -252,7 +252,7 @@ html, body{
     position: absolute;
     left: 0;
     top: 0;
-    color: #E5c454;
+    color: #00ABFF;
     font-family : -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
     text-align: justify;
     background: black;
@@ -318,6 +318,7 @@ h2{
     background-color: #46BCDE;
     text-decoration: none;
     display: inline-block;
+    color: black;
 }
 #nextButton1{
     font-family: Alexis; 
@@ -335,7 +336,7 @@ h2{
     display: inline-block;
     color: black;
 }
-#nextButton3, #nextButton4, #nextButton5, #nextButton6, #nextButton7, #nextButton8 {
+#nextButton3, #nextButton4, #nextButton5, #nextButton6, #nextButton7, #nextButton8 #nextButton10{
     font-family: Alexis;
     background-color: #46BCDE; 
     padding: 10px;
