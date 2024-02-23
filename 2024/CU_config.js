@@ -177,17 +177,17 @@ var config_data = `
 			"code": "die",
 			"type": "bool"
 		},
+ 		{
+			"name": "Flag for review:",
+			"code": "f",
+			"type": "bool"
+		},
 		{
 			"name": "Comments",
 			"code": "co",
 			"type": "text",
 			"size": 15,
 			"maxSize": 457
-		},
-		{
-			"name": "Flag for review:",
-			"code": "f",
-			"type": "bool"
 		}
 	]
 }`;
