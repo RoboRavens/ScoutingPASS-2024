@@ -26,7 +26,7 @@ html, body{
     width: 100%;
     margin: 0;
     padding: 0;
-    color: 00ABFF;
+    color: #00ABFF;
     background-color: black;
 }
 
@@ -264,6 +264,7 @@ html, body{
 
 #qr-code{
   text-align: center;
+  background-color: #161314;
 }
 
 h1{
@@ -405,6 +406,8 @@ table {
 }
 
 td {
+
+
     padding: 7px 4px;
 }
 
@@ -468,9 +471,11 @@ input[type=checkbox]:focus {
 }
 
 #qr-table {
+    background-color: #161314;
     text-align: center;
     color: #0068B3;
-    background-color: rgb(0, 0, 0);
+  
+   
 }
 
 #data {
