@@ -149,7 +149,7 @@ var config_data = `
 			"type": "radio",
 			"choices": {
 				"p": "Parked<br>",
-				"c": "Climbed<br>",
+				"1": "Climbed<br>",
 				"f": "Attempted but failed<br>",
 				"x": "Not attempted"
 			},
