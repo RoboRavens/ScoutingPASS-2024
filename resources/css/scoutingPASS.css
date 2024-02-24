@@ -12,7 +12,8 @@
 
 .blurred {
   filter:grayscale()
-  opacity(.5)
+  opacity(.5);
+  pointer-events: none;
 }
 
 .blurredbck {
