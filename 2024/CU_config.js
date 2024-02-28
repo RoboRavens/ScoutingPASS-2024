@@ -166,6 +166,17 @@ var config_data = `
 			},
 			"defaultValue": "x"
 		},
+		{
+			"name": "Driver Rank (1=best)",
+			"code": "dr",
+			"type": "radio",
+			"choices": {
+				"1": "1<br>",
+				"2": "2<br>",
+				"3": "3"
+			}
+			
+		},
 		
 		{
 			"name": "Played Defense?",
