@@ -183,7 +183,7 @@ if(data.code == "tct") {
   var feedButton = document.createElement("input");
   feedButton.setAttribute("id", "undo_" + data.code);
   feedButton.setAttribute("type", "button");
-  feedButton.setAttribute("onclick", "undoCycle(this.parentElement); addTypeFeed(this.parentElement); ; addXToFinalArray(); blurCanvas(); blurPickup()");
+  feedButton.setAttribute("onclick", "undoCycle(this.parentElement); addTypeFeed(this.parentElement); ; addFToFinalArray(); blurCanvas(); blurPickup()");
   feedButton.setAttribute("value", "Feed");
   feedButton.setAttribute('style', "margin-right: -10px;");
   cell.appendChild(feedButton);
@@ -1246,6 +1246,7 @@ function clearForm() {
         console.log("unsupported input type")
       }
     }
+    drawFields()
   }
   drawFields()
 }
