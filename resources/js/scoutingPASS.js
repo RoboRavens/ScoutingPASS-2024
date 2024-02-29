@@ -1160,7 +1160,20 @@ function clearForm() {
   } else {
     document.getElementById("input_m").value = match + 1
   }
-
+  var inp = document.createElement("input");
+  inp.classList.add("button");
+  inp.setAttribute("id", "input_" + data.code);
+  inp.setAttribute("type", "text");
+  if (enableGoogleSheets && data.hasOwnProperty('gsCol')) {
+    inp.setAttribute("name", data.gsCol);
+  } else {
+    inp.setAttribute("name", data.code);
+  }
+  inp.setAttribute("style", "background-color: black; color: white;border: none; text-align: center;");
+  inp.setAttribute("disabled", "");
+  inp.setAttribute("value", 0);
+  inp.setAttribute("size", 7);
+  inp.setAttribute("maxLength", 7);
   // Robot
   resetRobot()
 
@@ -1178,6 +1191,7 @@ function clearForm() {
     if (e.className == "buttonClass") {
       document.getElementById("input_amn").value = "[]"
       document.getElementById("display_amn").value = ""
+
     }
 
     if (e.className == "buttonClass") {
@@ -1196,7 +1210,7 @@ function clearForm() {
       e.value = "[]";
       continue;
     }
-
+if (code== "co") 
     radio = code.indexOf("_")
     if (radio > -1) {
       var baseCode = code.substr(0, radio)
@@ -1247,8 +1261,14 @@ function clearForm() {
       }
     }
     drawFields()
+    
+   
+    
+  
+    
+    
   }
-  drawFields()
+ 
 }
 
 function startTouch(e) {
