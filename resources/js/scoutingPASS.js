@@ -181,11 +181,10 @@ if(data.code == "tct") {
   ampButton.setAttribute("value", "Scored in Amp");
   cell.appendChild(ampButton);
   var feedButton = document.createElement("input");
-  feedButton.setAttribute("id", "undo_" + data.code);
+  feedButton.setAttribute("id", "feed_" + data.code);
   feedButton.setAttribute("type", "button");
-  feedButton.setAttribute("onclick", "undoCycle(this.parentElement); addTypeFeed(this.parentElement); ; addXToFinalArray(); blurCanvas(); blurPickup()");
+  feedButton.setAttribute("onclick", "newCycle(this.parentElement); addTypeFeed(this.parentElement); addFToFinalArray(); blurCanvas(); blurPickup()");
   feedButton.setAttribute("value", "Feed");
-  feedButton.setAttribute('style', "margin-right: -10px;");
   cell.appendChild(feedButton);
 }
 if(data.code == "act") {
@@ -1421,6 +1420,18 @@ function addXToFinalArray() {
 
 }
 
+function addFToFinalArray() {
+  // Get the current value of the input field and parse it as an array
+  var currentValue = JSON.parse(document.getElementById("input_ss").value);
+
+  // Add "x" to the array
+  currentValue.push("F");
+
+  // Update the input field with the modified array
+  document.getElementById("input_ss").value = JSON.stringify(currentValue);
+
+}
+
 function findMiddleOfBox(boxNum, width, height, resX, resY) {
   let boxHeight = height / resY;
   let boxWidth = width / resX;
@@ -1716,10 +1727,11 @@ function blurCanvas() {
   var amper = document.getElementById('amper_tct');
   var undo2 = document.getElementById('undo_ss');
   var flip = document.getElementById('flip_ss');
-  
+  var feed = document.getElementById('feed_tct');
   
   canvas.classList.toggle('blurred');
   amper.classList.toggle('blurred');
+  feed.classList.toggle('blurred');
   undo2.classList.toggle('blurred');
   flip.classList.toggle('blurred');
 
@@ -1768,12 +1780,14 @@ function blurAll() {
 
   var canvas = document.getElementById('canvas_ss');
   var amper = document.getElementById('amper_tct');
+  var feed = document.getElementById('feed_tct');
   var undo2 = document.getElementById('undo_ss');
   var flip = document.getElementById('flip_ss');
   canvas.classList.add('blurred');
   amper.classList.add('blurred');
   undo2.classList.add('blurred');
   flip.classList.add('blurred');
+  feed.classList.add('blurred');
   
   var cycle = document.getElementById('cycle_tct');
   var undo = document.getElementById('undo_tct');

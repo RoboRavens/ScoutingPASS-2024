@@ -109,11 +109,12 @@ html, body{
     background-color: rgba(229, 196, 84, 0.3);
     color: #E5c454;
     border:#161314;
-    width: 200px;
+    width: 175px;
     height: 50px;
     font-weight: bolder;
     font-size: large;
     margin-top: 20px;
+    margin-right: 10px;
 }
 
 #canvas_ss {
@@ -231,6 +232,16 @@ html, body{
 
 /* Style the Undo button */
 #undo_tct {
+    background-color: rgba(233, 79, 100, 0.3);
+    color: #e94f64;
+    border: black;
+    width: 100px;
+    height: 50px;
+    font-weight: bolder;
+    font-size: large;
+  }
+
+  #feed_tct {
     background-color: rgba(233, 79, 100, 0.3);
     color: #e94f64;
     border: black;
