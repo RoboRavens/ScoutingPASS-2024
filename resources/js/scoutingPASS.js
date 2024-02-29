@@ -1195,7 +1195,7 @@ function clearForm() {
       e.value = "[]";
       continue;
     }
-
+if (code =="co")
     radio = code.indexOf("_")
     if (radio > -1) {
       var baseCode = code.substr(0, radio)
