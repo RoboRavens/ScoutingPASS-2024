@@ -166,6 +166,10 @@ if(data.code == "tct") {
   cell.appendChild(button2);
   cell.appendChild(button2);
 
+
+
+  
+
   //var lineBreak = document.createElement("br");
   //cell.appendChild(lineBreak);
   
@@ -174,13 +178,20 @@ if(data.code == "tct") {
   var lineBreak = document.createElement("br");
   cell.appendChild(lineBreak);
 
+  
   var ampButton = document.createElement("input");
   ampButton.setAttribute("id", "amper_" + data.code);
   ampButton.setAttribute("type", "button");
   ampButton.setAttribute("onclick", "newCycle(this.parentElement); addShotTypeAmpScore(this.parentElement); addXToFinalArray(); blurCanvas(); blurPickup()");
   ampButton.setAttribute("value", "Scored in Amp");
   cell.appendChild(ampButton);
-
+  var button2 = document.createElement("input");
+  button2.setAttribute("id", "undo_" + data.code);
+  button2.setAttribute("type", "button");
+  button2.setAttribute("onclick", "undoCycle(this.parentElement)");
+  button2.setAttribute("value", "Feed");
+  button2.setAttribute('style', "margin-left: 20px;");
+  cell.appendChild(button2);
 }
 if(data.code == "act") {
   var button1 = document.createElement("input");
@@ -429,7 +440,7 @@ function addClickableImage(table, idx, name, data) {
   img.src = data.filename;
   img.setAttribute("id", "img_" + data.code);
   img.setAttribute("class", "field-image-src");
-  img.setAttribute("onload", "drawFields()");
+  img.setAttribute("onload", "draws()");
   img.setAttribute("hidden", "");
   cell.appendChild(img);
 
@@ -1759,6 +1770,7 @@ function blurAll() {
   var undo = document.getElementById('undo_tct');
   cycle.classList.add('blurred');
   undo.classList.add('blurred');  
+  
 
 }
 
@@ -1776,5 +1788,5 @@ window.onload = function () {
     }
   }
 
-  blurAll()
+  
 };

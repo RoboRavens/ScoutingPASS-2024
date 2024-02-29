@@ -94,8 +94,6 @@ var config_data = `
 			"dimensions": "9 5",
 			"clickRestriction": "onePerBox",
 			"toggleClick": "true",
-			"showFlip": "false",
-			"showUndo": "false",
 			"shape": "circle 10 #FFFD98 #D81E5B true",
 			"cycleTimer": "act"
 		},
@@ -125,9 +123,10 @@ var config_data = `
 			"name": "Shooting Location:",
 			"code": "ss",
 			"type": "field_image",
+			"dimensions": "10 10",
 			"filename": "2024/field_image.png",
 			"cycleTimer": "tct",
-			"shape": "circle 5 #FFFD98 #D81E5B true"
+			"shape": "circle 7 #FFFD98 #D81E5B true"
 			
 		},
 		{
