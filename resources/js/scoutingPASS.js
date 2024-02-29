@@ -172,7 +172,7 @@ if(data.code == "tct") {
   
   
   var lineBreak = document.createElement("br");
-  cell.appendChild(lineBreak);
+
 
   var ampButton = document.createElement("input");
   ampButton.setAttribute("id", "amper_" + data.code);
@@ -180,7 +180,13 @@ if(data.code == "tct") {
   ampButton.setAttribute("onclick", "newCycle(this.parentElement); addShotTypeAmpScore(this.parentElement); addXToFinalArray(); blurCanvas(); blurPickup()");
   ampButton.setAttribute("value", "Scored in Amp");
   cell.appendChild(ampButton);
-
+  var feedButton = document.createElement("input");
+  feedButton.setAttribute("id", "undo_" + data.code);
+  feedButton.setAttribute("type", "button");
+  feedButton.setAttribute("onclick", "undoCycle(this.parentElement); addTypeFeed(this.parentElement); ; addXToFinalArray(); blurCanvas(); blurPickup()");
+  feedButton.setAttribute("value", "Feed");
+  feedButton.setAttribute('style', "margin-right: -10px;");
+  cell.appendChild(feedButton);
 }
 if(data.code == "act") {
   var button1 = document.createElement("input");
@@ -1534,6 +1540,20 @@ function addShotTypeAmped(event)
   d.value = cycleInput.value.replace(/\"/g,'').replace(/\[/g, '').replace(/\]/g, '').replace(/,/g, ', ');
   
 }
+function addTypeFeed(event)
+{
+
+  //this line check cycleTime value
+  let base = "_amn"
+  let cycleInput = document.getElementById("input" + base);
+  var tempValue = Array.from(JSON.parse(cycleInput.value));
+  tempValue.push("F");
+  cycleInput.value = JSON.stringify(tempValue);
+  let d = document.getElementById("display" + base);
+  d.value = cycleInput.value.replace(/\"/g,'').replace(/\[/g, '').replace(/\]/g, '').replace(/,/g, ', ');
+  
+}
+
 function addShotTypeMiss(event)
 {
 
