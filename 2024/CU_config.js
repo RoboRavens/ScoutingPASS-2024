@@ -98,7 +98,7 @@ var config_data = `
 			"cycleTimer": "act"
 		},
 		{
-		"name": "Shots",
+		"name": "Scores",
 		"code": "as",
 		"type": "counter"
 		},
