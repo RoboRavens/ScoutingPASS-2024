@@ -84,11 +84,12 @@ var config_data = `
 			"code": "sp",
 			"type": "level",
 			"choices": {
+				"n": "None",			
 				"r": "Red",
 				"b": "Blue"
 				
 			},
-			"defaultValue": ""
+			"defaultValue": "n"
 		},
 		{
 			"name": "Points",
@@ -181,7 +182,8 @@ var config_data = `
 				"1": "1<br>",
 				"2": "2<br>",
 				"3": "3"
-			}
+			},
+			"defaultValue": 0
 			
 		},
 		
