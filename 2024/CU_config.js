@@ -78,6 +78,23 @@ var config_data = `
 			"filename": "2024/field_image.png",
 			"clickRestriction": "one",
 			"shape": "circle 5 white white white white white true"
+		},
+		{
+			"name": "Preciction",
+			"code": "sp",
+			"type": "level",
+			"choices": {
+				"r": "Red",
+				"b": "Blue"
+				
+			},
+			"defaultValue": ""
+		},
+		{
+			"name": "Points",
+			"code": "poi",
+			"type": "number",
+			"min": 1
 		}
 	],
 	"auton": [
