@@ -556,13 +556,15 @@ function addButton(table, idx, name, data) {
   button3.setAttribute("value", "Normal");
   cell.appendChild(button3);
 
+  /*
   var button1 = document.createElement("input");
   button1.setAttribute("id", "amped_" + data.code);
   button1.setAttribute("type", "button");
   button1.setAttribute("onclick", "addShotTypeAmped(this.parentElement); blurAmn(); blurPickup()");
   button1.setAttribute("value", "Amped");
   cell.appendChild(button1);
-
+  */
+ 
   var button2 = document.createElement("input");
   button2.setAttribute("id", "miss_" + data.code);
   button2.setAttribute("type", "button");
@@ -1738,27 +1740,15 @@ function blurCanvas() {
 }
 
 function blurAmn() {
-  var amped = document.getElementById('amped_amn');
+  //var amped = document.getElementById('amped_amn');
   var miss = document.getElementById('miss_amn');
   var normal = document.getElementById('normal_amn');
   var display = document.getElementById('display_amn');
   
-  amped.classList.toggle('blurred');
+  //amped.classList.toggle('blurred');
   miss.classList.toggle('blurred');
   normal.classList.toggle('blurred');
   display.classList.toggle('blurred');
-}
-
-function unblurAmn() {
-  var amped = document.getElementById('amped_amn');
-  var miss = document.getElementById('miss_amn');
-  //var normal = document.getElementById('normal_amn');
-  var display = document.getElementById('display_amn');
-  
-  amped.classList.add('blurred');
-  miss.classList.add('blurred');
-  //normal.classList.toggle('blurred');
-  display.classList.add('blurred');
 }
 
 function blurPickup() {
@@ -1769,11 +1759,11 @@ function blurPickup() {
 }
 
 function blurAll() {
-  var amped = document.getElementById('amped_amn');
+  //var amped = document.getElementById('amped_amn');
   var miss = document.getElementById('miss_amn');
   var normal = document.getElementById('normal_amn');
   var display = document.getElementById('display_amn');
-  amped.classList.add('blurred');
+  //amped.classList.add('blurred');
   miss.classList.add('blurred');
   normal.classList.add('blurred');
   display.classList.add('blurred');  

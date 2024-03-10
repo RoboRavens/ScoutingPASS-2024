@@ -82,10 +82,6 @@ var config_data = `
 	],
 	"auton": [
 
-	{ 	"name": "Auto Cycle Timer",
-	     "code": "act",
-		  "type": "cycle"
-	},
 		{
 			"name": "Auto Scoring",
 			"code": "asg",
@@ -138,11 +134,6 @@ var config_data = `
 	],
 	"postmatch":[
 		{
-			"name": "# of Climbers",
-			"code": "ac",
-			"type": "counter"
-		},
-		{
 			"name": "Final Status",
 			"code": "fs",
 			"type": "radio",
@@ -183,13 +174,13 @@ var config_data = `
 			"type": "bool"
 		},
 		{
-			"name": "Died/Tipped",
-			"code": "die",
+			"name": "Was Defended?",
+			"code": "wd",
 			"type": "bool"
 		},
- 		{
-			"name": "Flag for review:",
-			"code": "f",
+		{
+			"name": "Died/Tipped",
+			"code": "die",
 			"type": "bool"
 		},
 		{

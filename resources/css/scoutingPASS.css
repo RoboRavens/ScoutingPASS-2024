@@ -208,7 +208,7 @@ html, body{
     background-color: rgba(233, 79, 100, 0.3);
     color: #e94f64;
     border: black;
-    width: 85px;
+    width: 145px;
     height: 50px;
     font-weight: bolder;
     font-size: large;
@@ -217,18 +217,16 @@ html, body{
   }
 
   #normal_amn {
-    background-color: rgba(70, 188, 222, 0.3);
-    color: #46BCDE;
+    background-color: rgba(82, 210, 115, 0.3);
+    color: #52d273;
     border: black;
-    width: 85px;
+    width: 145px;
     height: 50px;
     font-weight: bolder;
     font-size: large;
     margin-right: 5px;
     margin-left: 5px;
   }
-
-  
 
 /* Style the Undo button */
 #undo_tct {
@@ -242,8 +240,8 @@ html, body{
   }
 
   #feed_tct {
-    background-color: rgba(233, 79, 100, 0.3);
-    color: #e94f64;
+    background-color: rgba(225, 119, 249, 0.3);
+    color: #E177F9;
     border: black;
     width: 100px;
     height: 50px;
@@ -466,11 +464,14 @@ input[type=checkbox] {
 }
 
 input[type=checkbox]:checked {
-  background-color: #52d273;
-  background-size: 40px 40px;
-  -ms-transform: scaleX(-5) rotate(-5deg); /* IE 9 */
-  -webkit-transform: scaleX(-5) rotate(-5deg); /* Chrome, Safari, Opera */
-  transform: scaleX(-1) rotate(-5deg);
+    height: 50px; 
+    width: 18px; 
+    border-bottom: 10px solid green; 
+    border-right: 10px solid green;
+    background-color: #161314; 
+    transform: rotate(45deg); 
+    margin-left: 20px; 
+    margin-right: 20px;
 }
 
 input[type=checkbox]:focus {
