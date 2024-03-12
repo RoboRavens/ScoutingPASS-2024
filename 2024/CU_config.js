@@ -69,7 +69,7 @@ var config_data = `
 				"n": "No"
 				
 			},
-			"required": "false"
+			"defaultValue": "y"
 		},
 		{
 			"name": "Auto Start Position",
