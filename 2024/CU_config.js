@@ -60,7 +60,7 @@ var config_data = `
 			"min": 1,
 			"max": 99999
 		},
-				{
+		{
 			"name": "Preload",
 			"code": "pr",
 			"type": "radio",
@@ -69,11 +69,11 @@ var config_data = `
 				"n": "No"
 				
 			},
-			"defaultValue": "x"
+			"required": "false"
 		},
 		{
 			"name": "Auto Start Position",
-			"code": "asl",
+			"code": "as",
 			"type": "clickable_image",
 			"filename": "2024/field_image.png",
 			"clickRestriction": "one",
@@ -172,7 +172,7 @@ var config_data = `
 				"f": "Attempted but failed<br>",
 				"x": "Not attempted"
 			},
-			"defaultValue": "x"
+			"defaultValue": " "
 		},
 		{
 			"name": "Driver Rank (1=best)",
@@ -183,7 +183,7 @@ var config_data = `
 				"2": "2<br>",
 				"3": "3"
 			},
-			"defaultValue": 0
+			"defaultValue": " "
 			
 		},
 		
