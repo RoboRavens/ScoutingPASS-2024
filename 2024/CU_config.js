@@ -172,7 +172,7 @@ var config_data = `
 				"f": "Attempted but failed<br>",
 				"x": "Not attempted"
 			},
-			"defaultValue": " "
+			"defaultValue": "x"
 		},
 		{
 			"name": "Driver Rank (1=best)",
