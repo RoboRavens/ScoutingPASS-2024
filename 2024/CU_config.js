@@ -113,7 +113,7 @@ var config_data = `
 		},
 		{
 		"name": "Scores",
-		"code": "as",
+		"code": "asc",
 		"type": "counter"
 		},
   		{
