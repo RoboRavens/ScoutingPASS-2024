@@ -22,7 +22,8 @@ var options = {
 
 // Must be filled in: e=event, m=match#, l=level(q,qf,sf,f), t=team#, r=robot(r1,r2,b1..), s=scouter
 //var requiredFields = ["e", "m", "l", "t", "r", "s", "as"];
-var requiredFields = ["e", "m", "l", "r", "s", "as"];
+var requiredFields = ["e", "m", "l", "r",  "s","as"];
+
 
 function addTimer(table, idx, name, data) {
   var row = table.insertRow(idx);
@@ -688,6 +689,7 @@ function addNumber(table, idx, name, data) {
 }
 
 function addRadio(table, idx, name, data) {
+ 
   var row = table.insertRow(idx);
   var cell1 = row.insertCell(0);
   cell1.classList.add("title");
@@ -728,6 +730,7 @@ function addRadio(table, idx, name, data) {
       cell2.appendChild(inp);
       cell2.innerHTML += data.choices[c];
     });
+    
   }
   var inp = document.createElement("input");
   inp.setAttribute("id", "display_" + data.code);
@@ -742,7 +745,7 @@ function addRadio(table, idx, name, data) {
     def.setAttribute("value", data.defaultValue);
     cell2.appendChild(def);
   }
-
+  
   return idx + 1;
 }
 
@@ -1007,7 +1010,7 @@ function validateLevel() {
 
 function validateData() {
   var ret = true
-  var errStr = "Bad fields: ";
+  var errStr = "Bad fields lock in dawg: ";
   for (rf of requiredFields) {
     // Robot requires special (radio) validation
     if (rf == "r") {
@@ -1020,12 +1023,13 @@ function validateData() {
         errStr += rf + " "
         ret = false
       }
+      
       // Normal validation (length <> 0)
     } else if (document.getElementById("input_" + rf).value == "[]") {
         errStr += rf + " ";
         ret = false;
     } else if (document.getElementById("input_" + rf).value.length == 0) {
-      errStr += rf + " "
+      errStr += rf + ""
       ret = false
     }
   }
@@ -1185,7 +1189,7 @@ function clearForm() {
       e.value = "[]";
       continue;
     }
-
+   
     // Don't clear key fields
     if (code == "m") continue
     if (code.substring(0, 2) == "r_") continue
@@ -1197,7 +1201,8 @@ function clearForm() {
       e.value = "[]";
       continue;
     }
-    if (code =="co")
+    if (code =="co","dr","tr","fs", "sp", "poi")
+    
     radio = code.indexOf("_")
     if (radio > -1) {
       var baseCode = code.substr(0, radio)
@@ -1247,8 +1252,10 @@ function clearForm() {
         console.log("unsupported input type")
       }
     }
+  
   }
   drawFields()
+  
 }
 
 function startTouch(e) {
