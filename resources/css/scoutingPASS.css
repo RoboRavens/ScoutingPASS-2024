@@ -272,6 +272,10 @@ html, body{
     border-color: #656565;
 }
 
+#display_tct {
+    opacity: 0;
+}
+
 .main-panel{
     display: none;
     height: 100%;

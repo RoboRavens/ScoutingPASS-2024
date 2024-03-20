@@ -60,7 +60,7 @@ function addTimer(table, idx, name, data) {
     inp.setAttribute("name", data.code);
   }
   //inp.setAttribute("style", "background-color: black; color: white;border: none; text-align: center;");
-  inp.setAttribute("disabled", "");
+  inp.setAttribute("disabled", "true");
   inp.setAttribute("value", 0);
   inp.setAttribute("size", 7);
   inp.setAttribute("maxLength", 7);
@@ -161,7 +161,7 @@ if(data.code == "tct") {
   var button2 = document.createElement("input");
   button2.setAttribute("id", "cycle_" + data.code);
   button2.setAttribute("type", "button");
-  button2.setAttribute("onclick", "newCycle(this.parentElement); blurCanvas(); blurPickup()");
+  button2.setAttribute("onclick", "newCycle(this.parentElement); blurCanvas(); blurPickup(); blurUndo1()");
   button2.setAttribute("value", "Pickup");
   cell.appendChild(button2);
   cell.appendChild(button2);
@@ -178,13 +178,13 @@ if(data.code == "tct") {
   var ampButton = document.createElement("input");
   ampButton.setAttribute("id", "amper_" + data.code);
   ampButton.setAttribute("type", "button");
-  ampButton.setAttribute("onclick", "newCycle(this.parentElement); addShotTypeAmpScore(this.parentElement); addXToFinalArray(); blurCanvas(); blurPickup()");
+  ampButton.setAttribute("onclick", "newCycle(this.parentElement); addShotTypeAmpScore(this.parentElement); addXToFinalArray(); blurCanvas(); blurPickup(); blurUndo3(); blurUndo1()");
   ampButton.setAttribute("value", "Scored in Amp");
   cell.appendChild(ampButton);
   var feedButton = document.createElement("input");
   feedButton.setAttribute("id", "feed_" + data.code);
   feedButton.setAttribute("type", "button");
-  feedButton.setAttribute("onclick", "newCycle(this.parentElement); addTypeFeed(this.parentElement); addFToFinalArray(); blurCanvas(); blurPickup()");
+  feedButton.setAttribute("onclick", "newCycle(this.parentElement); addTypeFeed(this.parentElement); addFToFinalArray(); blurCanvas(); blurPickup(); blurUndo3(); blurUndo1()");
   feedButton.setAttribute("value", "Feed");
   cell.appendChild(feedButton);
 }
@@ -337,7 +337,7 @@ function addClickableImage(table, idx, name, data) {
   var canvas = document.createElement('canvas');
   //canvas.onclick = onFieldClick;
 
-  canvas.setAttribute("onclick", "onFieldClick(event); blurAmn(); blurPickup()");
+  canvas.setAttribute("onclick", "onFieldClick(event); blurAmn(); blurPickup(); blurUndo2()");
   canvas.setAttribute("class", "field-image-src");
   canvas.setAttribute("id", "canvas_" + data.code);
   canvas.innerHTML = "No canvas support";
@@ -464,7 +464,7 @@ function addClickableImage(table, idx, name, data) {
       // Undo button
       let undoButton = document.createElement("input");
       undoButton.setAttribute("type", "button");
-      undoButton.setAttribute("onclick", "undo(this.parentElement); blurCanvas(); blurAmn()");
+      undoButton.setAttribute("onclick", "undo(this.parentElement); blurCanvas(); blurAmn(); blurUndo2()");
       undoButton.setAttribute("value", "Undo");
       undoButton.setAttribute("id", "undo_" + data.code);
       undoButton.setAttribute("class", "undoButton");
@@ -553,7 +553,7 @@ function addButton(table, idx, name, data) {
   var button3 = document.createElement("input");
   button3.setAttribute("id", "normal_" + data.code);
   button3.setAttribute("type", "button");
-  button3.setAttribute("onclick", "addShotTypeNormal(this.parentElement); blurAmn(); blurPickup()");
+  button3.setAttribute("onclick", "addShotTypeNormal(this.parentElement); blurAmn(); blurPickup(); blurUndo2(); blurUndo3()");
   button3.setAttribute("value", "Normal");
   cell.appendChild(button3);
 
@@ -569,7 +569,7 @@ function addButton(table, idx, name, data) {
   var button2 = document.createElement("input");
   button2.setAttribute("id", "miss_" + data.code);
   button2.setAttribute("type", "button");
-  button2.setAttribute("onclick", "addShotTypeMiss(this.parentElement); blurAmn(); blurPickup()");
+  button2.setAttribute("onclick", "addShotTypeMiss(this.parentElement); blurAmn(); blurPickup(); blurUndo2(); blurUndo3()");
   button2.setAttribute("value", "Miss");
   cell.appendChild(button2);
 
@@ -1788,6 +1788,21 @@ function blurPickup() {
   //undo.classList.toggle('blurred');
 }
 
+function blurUndo1() {
+  var undo = document.getElementById('undo_tct');
+  undo.classList.toggle('blurred');
+}
+
+function blurUndo2() {
+  var undo = document.getElementById('undo_ss');
+  undo.classList.toggle('blurred');
+}
+
+function blurUndo3() {
+  var undo = document.getElementById('undo_amn');
+  undo.classList.toggle('blurred');
+}
+
 function blurAll() {
   //var amped = document.getElementById('amped_amn');
   var miss = document.getElementById('miss_amn');
@@ -1813,6 +1828,15 @@ function blurAll() {
   //var undo = document.getElementById('undo_tct');
   cycle.classList.add('blurred');
   //undo.classList.add('blurred');  
+
+  var undo1 = document.getElementById('undo_tct');
+  undo1.classList.add('blurred');
+
+  var undo2 = document.getElementById('undo_ss');
+  undo2.classList.add('blurred');
+
+  var undo3 = document.getElementById('undo_amn');
+  undo3.classList.add('blurred');
 
 }
 
