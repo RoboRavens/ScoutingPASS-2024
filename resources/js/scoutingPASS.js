@@ -153,7 +153,7 @@ if(data.code == "tct") {
   var button3 = document.createElement("input");
   button3.setAttribute("id", "undo_" + data.code);
   button3.setAttribute("type", "button");
-  button3.setAttribute("onclick", "undoCycle(this.parentElement)");
+  button3.setAttribute("onclick", "undoCycle(this.parentElement); blurAll(); blurPickup()");
   button3.setAttribute("value", "Undo");
 
   cell.appendChild(button3);
@@ -572,6 +572,14 @@ function addButton(table, idx, name, data) {
   button2.setAttribute("onclick", "addShotTypeMiss(this.parentElement); blurAmn(); blurPickup()");
   button2.setAttribute("value", "Miss");
   cell.appendChild(button2);
+
+  var button3 = document.createElement("input");
+  button3.setAttribute("id", "undo_" + data.code);
+  button3.setAttribute("type", "button");
+  button3.setAttribute("onclick", "blurAll(); blurCanvas(); removeRecentType(this.parentElement)");
+  button3.setAttribute("value", "Undo");
+
+  cell.appendChild(button3);
   
 }
 
@@ -1574,6 +1582,21 @@ function addTypeFeed(event)
   
 }
 
+function removeRecentType(event)
+{
+
+  //this line check cycleTime value
+  let base = "_amn"
+  let cycleInput = document.getElementById("input" + base);
+  var tempValue = Array.from(JSON.parse(cycleInput.value));
+  tempValue.pop();
+  cycleInput.value = JSON.stringify(tempValue);
+  let d = document.getElementById("display" + base);
+  d.value = cycleInput.value.replace(/\"/g,'').replace(/\[/g, '').replace(/\]/g, '').replace(/,/g, ', ');
+  
+}
+
+
 function addShotTypeMiss(event)
 {
 
@@ -1734,15 +1757,15 @@ function copyData(){
 function blurCanvas() {
   var canvas = document.getElementById('canvas_ss');
   var amper = document.getElementById('amper_tct');
-  var undo2 = document.getElementById('undo_ss');
-  var flip = document.getElementById('flip_ss');
+  //var undo2 = document.getElementById('undo_ss');
+  //var flip = document.getElementById('flip_ss');
   var feed = document.getElementById('feed_tct');
   
   canvas.classList.toggle('blurred');
   amper.classList.toggle('blurred');
   feed.classList.toggle('blurred');
-  undo2.classList.toggle('blurred');
-  flip.classList.toggle('blurred');
+  //undo2.classList.toggle('blurred');
+  //flip.classList.toggle('blurred');
 
 }
 
@@ -1760,9 +1783,9 @@ function blurAmn() {
 
 function blurPickup() {
   var cycle = document.getElementById('cycle_tct');
-  var undo = document.getElementById('undo_tct');
+  //var undo = document.getElementById('undo_tct');
   cycle.classList.toggle('blurred');
-  undo.classList.toggle('blurred');
+  //undo.classList.toggle('blurred');
 }
 
 function blurAll() {
@@ -1778,18 +1801,18 @@ function blurAll() {
   var canvas = document.getElementById('canvas_ss');
   var amper = document.getElementById('amper_tct');
   var feed = document.getElementById('feed_tct');
-  var undo2 = document.getElementById('undo_ss');
-  var flip = document.getElementById('flip_ss');
+  //var undo2 = document.getElementById('undo_ss');
+  //var flip = document.getElementById('flip_ss');
   canvas.classList.add('blurred');
   amper.classList.add('blurred');
-  undo2.classList.add('blurred');
-  flip.classList.add('blurred');
+  //undo2.classList.add('blurred');
+  //flip.classList.add('blurred');
   feed.classList.add('blurred');
   
   var cycle = document.getElementById('cycle_tct');
-  var undo = document.getElementById('undo_tct');
+  //var undo = document.getElementById('undo_tct');
   cycle.classList.add('blurred');
-  undo.classList.add('blurred');  
+  //undo.classList.add('blurred');  
 
 }
 

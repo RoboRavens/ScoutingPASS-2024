@@ -180,7 +180,7 @@ html, body{
     font-weight: bolder;
     font-size: large;
   }
-
+  
   
   #start_act{
     background-color: rgba(82, 210, 115, 0.3);
@@ -228,8 +228,20 @@ html, body{
     margin-left: 5px;
   }
 
+  #undo_amn {
+    opacity: 0.5;
+    background-color: rgba(233, 79, 100, 0.3);
+    color: #e94f64;
+    border: black;
+    width: 100px;
+    height: 50px;
+    font-weight: bolder;
+    font-size: large;
+  }
+
 /* Style the Undo button */
 #undo_tct {
+    opacity: 0.5;
     background-color: rgba(233, 79, 100, 0.3);
     color: #e94f64;
     border: black;
@@ -360,6 +372,7 @@ h2{
 }
 
 .undoButton {
+    opacity: 0.5;
     background-color: rgba(233, 79, 100, 0.3);
     color: #e94f64;
     border: black;
@@ -372,6 +385,7 @@ h2{
 }
 
 .flipButton {
+    opacity: 0.5;
     background-color: rgba(70, 188, 222, 0.3);
     color: #46BCDE;
     border: black;
