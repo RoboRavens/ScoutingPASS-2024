@@ -208,19 +208,18 @@ html, body{
     background-color: rgba(233, 79, 100, 0.3);
     color: #e94f64;
     border: black;
-    width: 145px;
+    width: 100px;
     height: 50px;
     font-weight: bolder;
     font-size: large;
     margin-right: 7px;
-    margin-left: 7px;
   }
 
   #normal_amn {
     background-color: rgba(82, 210, 115, 0.3);
     color: #52d273;
     border: black;
-    width: 145px;
+    width: 100px;
     height: 50px;
     font-weight: bolder;
     font-size: large;
@@ -233,10 +232,12 @@ html, body{
     background-color: rgba(233, 79, 100, 0.3);
     color: #e94f64;
     border: black;
-    width: 100px;
+    width: 70px;
     height: 50px;
     font-weight: bolder;
     font-size: large;
+    margin-left: 15px;
+    margin-right: 5px;
   }
 
 /* Style the Undo button */
